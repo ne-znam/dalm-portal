@@ -16,27 +16,27 @@
                 <!-- Header main navigation -->
                 <?php // TODO: create navigation walker ?>
                 <ul class="main-navbar__menu">
-                    <li class="menu-item"><a href="#">Vijesti</a></li>
-                    <li class="menu-item"><a href="#">Sport</a></li>
-                    <li class="menu-item active"><a href="#">Život</a></li>
-                    <li class="menu-item"><a href="#">Hrvatska</a></li>
-                    <li class="menu-item"><a href="#">Video</a></li>
-                    <li class="menu-item"><a href="#">Hedonistika</a></li>
+                    <li class="menu-item"><a href="/kategorija/vijesti/">Vijesti</a></li>
+                    <li class="menu-item"><a href="/kategorija/sport/">Sport</a></li>
+                    <li class="menu-item"><a href="/kategorija/zivot/">Život</a></li>
+                    <li class="menu-item"><a href="/kategorija/hrvatska/">Hrvatska</a></li>
+                    <li class="menu-item"><a href="/kategorija/video/">Video</a></li>
+                    <li class="menu-item"><a href="/kategorija/hedonistika/">Hedonistika</a></li>
                     <li class="menu-item menu-item--has-children">
                         <a href="#">Ostale rubrike</a>
                         <ul class="submenu">
-                            <li class="menu-item"><a href="#">Energija i Ekologija</a></li>
-                            <li class="menu-item"><a href="#">1 na 10</a></li>
-                            <li class="menu-item"><a href="#">Vjenčanje</a></li>
-                            <li class="menu-item"><a href="#">Nekretnine</a></li>
-                            <li class="menu-item"><a href="#">Sport 365</a></li>
-                            <li class="menu-item"><a href="#">Turizam</a></li>
-                            <li class="menu-item"><a href="#">Svijet</a></li>
-                            <li class="menu-item"><a href="#">Zdravlje</a></li>
-                            <li class="menu-item"><a href="#">Gastro</a></li>
+                            <li class="menu-item"><a href="/kategorija/energija-i-ekologija/">Energija i Ekologija</a></li>
+                            <li class="menu-item"><a href="/kategorija/1-na-10/">1 na 10</a></li>
+                            <li class="menu-item"><a href="/kategorija/vjencanje/">Vjenčanje</a></li>
+                            <li class="menu-item"><a href="/kategorija/nekretnine">Nekretnine</a></li>
+                            <li class="menu-item"><a href="/kategorija/sport-365/">Sport 365</a></li>
+                            <li class="menu-item"><a href="/kategorija/turizam/">Turizam</a></li>
+                            <li class="menu-item"><a href="/kategorija/svijet/">Svijet</a></li>
+                            <li class="menu-item"><a href="/kategorija/zdravlje/">Zdravlje</a></li>
+                            <li class="menu-item"><a href="/kategorija/gastro/">Gastro</a></li>
                         </ul>
                     </li>
-                    <li class="menu-item"><a href="#">Kalendar</a></li>
+                    <li class="menu-item"><a href="/kategorija/kalendar/">Kalendar</a></li>
                 </ul>
 
                 <!-- Import search section (desktop) -->

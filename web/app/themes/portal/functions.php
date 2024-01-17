@@ -66,3 +66,13 @@ function dn_time_from()
         return 'prije ' . ceil($day_diff / 30) . ' mjeseci';
     }
 }
+
+
+add_filter( 'post_thumbnail_id', 'portal_get_featured_image_id', 10, 2 );
+
+function portal_get_featured_image_id( $image_id, $post_id ) {
+	if (!$image_id) {
+		return 9;
+	}
+	return $image_id;
+}
