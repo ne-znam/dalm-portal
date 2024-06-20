@@ -19,17 +19,21 @@ if ($category) {
         <?php endif; ?>
     </div>
     <?php
-    $q = [
-        'posts_per_page' => 3,
-        'post_type' => 'post',
-        'post_status' => 'publish',
-        'ignore_sticky_posts' => true,
-        'no_found_rows' => true,
-    ];
-    if ($category) {
-        $q['cat'] = $category->term_id;
+    if (isset($args['zone']) && $args['zone']) {
+        $q = z_get_zone_query($args['zone'], ['posts_per_page' => 3]);
+    } else {
+	    $q = [
+		    'posts_per_page'      => 3,
+		    'post_type'           => 'post',
+		    'post_status'         => 'publish',
+		    'ignore_sticky_posts' => true,
+		    'no_found_rows'       => true,
+	    ];
+	    if ( $category ) {
+		    $q['cat'] = $category->term_id;
+	    }
+	    $q = new WP_Query( $q );
     }
-    $q = new WP_Query($q);
     $open = false;
     while ($q->have_posts()) {
         $q->the_post();

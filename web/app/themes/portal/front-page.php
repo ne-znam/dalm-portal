@@ -25,13 +25,7 @@ get_header();
                 when there is more on the same page (data-carousel-id="" attribute) -->
                 <div class="header-gallery-container" data-carousel-id="1">
                     <?php
-                    $q = new WP_Query([
-                            'posts_per_page' => 5,
-                        'post_type' => 'post',
-                        'post_status' => 'publish',
-                        'ignore_sticky_posts' => true,
-                        'no_found_rows' => true,
-                    ]);
+                    $q = z_get_zone_query('featured');
                     while ($q->have_posts()) {
                         $q->the_post();
                         get_template_part('templates/articles/featured-image-slider');
@@ -73,9 +67,9 @@ get_header();
         <!--<div class="row-2__news-5"></div>-->
         <?php get_template_part('templates/widgets/najnovije') ?>
 <?php endif ?>
-        <?php get_template_part('templates/widgets/news-3', null, ['title' => 'Aktualno', 'container_class' => 'row-3__news-3--1']) ?>
-        <?php get_template_part('templates/widgets/news-3', null, ['category' => 'sport', 'container_class' => 'row-3__news-3--2']) ?>
-        <?php get_template_part('templates/widgets/news-3', null, ['category' => 'zivot', 'container_class' => 'row-3__news-3--3']) ?>
+        <?php get_template_part('templates/widgets/news-3', null, ['title' => 'Aktualno', 'zone' => 'aktualno', 'container_class' => 'row-3__news-3--1']) ?>
+        <?php get_template_part('templates/widgets/news-3', null, ['category' => 'sport', 'zone' => 'sport', 'container_class' => 'row-3__news-3--2']) ?>
+        <?php get_template_part('templates/widgets/news-3', null, ['category' => 'zivot','zone' => 'zivot', 'container_class' => 'row-3__news-3--3']) ?>
         <div class="row-3__news-4">
             <!-- News 4 article -->
             <div class="news-4-article">

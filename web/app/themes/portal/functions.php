@@ -76,3 +76,13 @@ function portal_get_featured_image_id( $image_id, $post_id ) {
 	}
 	return $image_id;
 }
+
+add_filter('wp_is_mobile', 'portal_wp_is_mobile');
+
+function portal_wp_is_mobile($is_mobile)
+{
+	if (isset($_GET['force_mobile'])) {
+		return true;
+	}
+	return false;
+}
