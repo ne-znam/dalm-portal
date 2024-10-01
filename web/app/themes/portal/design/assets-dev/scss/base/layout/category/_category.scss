@@ -1,0 +1,417 @@
+@use "../../../abstracts/helpers" as *;
+
+.content-section--category {
+    .row-2__main-news,
+    .row-2__news-4,
+    .row-2__column,
+    .row-7__kaufland-banners,
+    .row-8__featured-articles .tag-container,
+    .row-8__featured-articles .featured-article-container,
+    .row-8__article-with-image-and-list .tag-container,
+    .row-8__article-with-image-and-list .news-with-image-and-list,
+    .row-9__landscape-banner > a, //landscape banner container
+    .row-11__article-with-image-and-list,
+    .sidebar-area--1,
+    .sidebar-area--2 {
+        display: none;
+    }
+
+    .row-3__tag-container {
+        .tag-container {
+            margin-top: 20px;
+            margin-bottom: 6px;
+        }
+    }
+
+    .row-8__landscape-banner {
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--color-grey-g100);
+    }
+
+    .category-column--mobile {
+        .column-box.column-box--without-border {
+            margin-top: 17px;
+            border-bottom-color: var(--color-grey-g100);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .row-9__featured-articles--1,
+    .row-9__featured-articles--2,
+    .row-9__featured-articles--3,
+    .extra-featured-article--mobile {
+        .featured-article:last-of-type {
+            margin-bottom: 20px;
+        }
+    }
+
+    .row-9__featured-articles--1 {
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--color-grey-g100);
+    }
+
+    .extra-news-with-image-and-list--only-mobile {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+}
+
+.row-9__landscape-banner {
+    padding-bottom: 21px;
+    border-bottom: 1px solid var(--color-grey-g100);
+}
+
+@include breakpoint(tablet, "screen") {
+    .content-section--category {
+        grid-template-areas: 
+            "row-1__landscape-banner row-1__landscape-banner row-1__landscape-banner"
+            "row-2__main-news row-2__main-news row-2__news-4"
+            "row-3__tag-container row-3__tag-container row-3__tag-container"
+            "row-4__news-3--1 row-4__news-3--2 row-4__news-3--3"
+            "row-5__news-3--1 row-5__news-3--2 row-5__news-3--3"
+            "row-6__news-3--1 row-6__news-3--2 row-6__news-3--3"
+            "row-7__kaufland-banners row-7__kaufland-banners row-7__kaufland-banners"
+            "row-8__featured-articles row-8__article-with-image-and-list row-8__article-with-image-and-list"
+            "row-9__landscape-banner row-9__landscape-banner row-9__landscape-banner"
+            "row-10__featured-articles--1 row-10__featured-articles--2 row-10__featured-articles--3"
+            "row-11__article-with-image-and-list row-11__article-with-image-and-list row-11__article-with-image-and-list";
+
+        .row-1__landscape-banner {
+            grid-area: row-1__landscape-banner;
+            margin-bottom: 0;
+        }
+
+        .row-1__square-banner {
+            grid-area: row-1__square-banner;
+        }
+
+        .row-2__main-news {
+            grid-area: row-2__main-news;
+            display: flex;
+            margin-top: 32px;
+            justify-content: stretch;
+
+            .main-news-box.main-news-box--content-on-image {
+                flex: 1;
+            }
+        }
+
+        .row-2__news-4 {
+            grid-area: row-2__news-4;
+            display: flex;
+            margin-top: 32px;
+        }
+
+        .row-2__column {
+            grid-area: row-2__column;
+            margin-top: 32px;
+
+            .column-box {
+                .news-5-container {
+                    .news-5-article:last-of-type {
+                        display: none;
+                    }
+
+                    .news-5-article:nth-of-type(3) {
+                        margin-bottom: 0;
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+
+        .row-3__tag-container {
+            grid-area: row-3__tag-container;
+
+            .tag-container {
+                margin-top: 0;
+                margin-bottom: 2px;
+            }
+        }
+
+        .row-4__news-3--1 {
+            grid-area: row-4__news-3--1;
+        }
+
+        .row-4__news-3--2 {
+            grid-area: row-4__news-3--2;
+        }
+
+        .row-4__news-3--3 {
+            grid-area: row-4__news-3--3;
+        }
+
+        .row-5__news-3--1 {
+            grid-area: row-5__news-3--1;
+        }
+
+        .row-5__news-3--2 {
+            grid-area: row-5__news-3--2;
+        }
+
+        .row-5__news-3--3 {
+            grid-area: row-5__news-3--3;
+        }
+
+        .row-6__news-3--1 {
+            grid-area: row-6__news-3--1;
+        }
+
+        .row-6__news-3--2 {
+            grid-area: row-6__news-3--2;
+        }
+
+        .row-6__news-3--3 {
+            grid-area: row-6__news-3--3;
+        }
+
+        .row-7__kaufland-banners {
+            grid-area: row-7__kaufland-banners;
+            display: block;
+        }
+
+        .row-8__featured-articles {
+            grid-area: row-8__featured-articles;
+
+            .news-3-big-article {
+                display: none;
+            }
+
+            .tag-container,
+            .featured-article-container {
+                display: flex;
+            }
+
+            .featured-article-container {
+                .featured-article:first-of-type {
+                    padding-top: 15px;
+                    border-top: 1px solid var(--color-grey-g100);
+                }
+            }
+        }
+
+        .row-8__article-with-image-and-list {
+            grid-area: row-8__article-with-image-and-list;
+
+            .news-3-big-article {
+                display: none;
+            }
+
+            .news-with-image-and-list {
+                .article-list-left {
+                    .extra-small-article {
+                        h4 {
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            white-space: pre-wrap;
+                        }
+                    }
+                }
+            }
+
+            .tag-container,
+            .news-with-image-and-list {
+                display: flex;
+            }
+        }
+
+        .row-9__landscape-banner {
+            grid-area: row-9__landscape-banner;
+            padding-bottom: 0;
+            border-bottom: none;
+            margin-top: 16px;
+
+            .news-4-article {
+                display: none;
+            }
+
+            & > a {
+                display: flex;
+            }
+        }
+
+        .row-10__featured-articles--1 {
+            grid-area: row-10__featured-articles--1;
+        }
+
+        .row-10__featured-articles--2 {
+            grid-area: row-10__featured-articles--2;
+        }
+
+        .row-10__featured-articles--3 {
+            grid-area: row-10__featured-articles--3;
+        }
+
+        .row-10__featured-articles--1,
+        .row-10__featured-articles--2,
+        .row-10__featured-articles--3 {
+            .square-banner {
+                display: none;
+            }
+        }
+
+        .row-11__article-with-image-and-list {
+            grid-area: row-11__article-with-image-and-list;
+            display: block;
+        }
+
+        .featured-article h3 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            white-space: pre-wrap;
+        }
+    }
+}
+
+@include breakpoint(desktop, "screen") {
+    .content-section--category {
+        grid-template-areas: 
+            "row-1__landscape-banner row-1__landscape-banner row-1__landscape-banner row-1__square-banner"
+            "row-2__main-news row-2__main-news row-2__news-4 row-2__column"
+            "row-3__tag-container row-3__tag-container row-3__tag-container row-3__tag-container"
+            "row-4__news-3--1 row-4__news-3--2 row-4__news-3--3 sidebar-area--1"
+            "row-5__news-3--1 row-5__news-3--2 row-5__news-3--3 sidebar-area--1"
+            "row-6__news-3--1 row-6__news-3--2 row-6__news-3--3 sidebar-area--1"
+            "row-7__kaufland-banners row-7__kaufland-banners row-7__kaufland-banners row-7__kaufland-banners"
+            "row-8__featured-articles row-8__article-with-image-and-list row-8__article-with-image-and-list sidebar-area--2"
+            "row-9__landscape-banner row-9__landscape-banner row-9__landscape-banner sidebar-area--2"
+            "row-10__featured-articles--1 row-10__featured-articles--2 row-10__featured-articles--3 sidebar-area--2"
+            "row-11__article-with-image-and-list row-11__article-with-image-and-list row-11__article-with-image-and-list sidebar-area--2";
+
+        .row-8__featured-articles {
+            min-width: 300px;
+
+            .featured-article {
+                h3 {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .row-8__article-with-image-and-list {
+            display: flex;
+            flex-direction: column;
+
+            .news-with-image-and-list {
+                align-self: flex-end;
+                width: calc(100% - 48px);
+                gap: 16px;
+
+                .article-list-left {
+                    width: 210px;
+
+                    .extra-small-article {
+                        width: 210px;
+                    }
+                }
+
+                .overlay-helper {
+                    width: calc(100% - 20px);
+                    left: 10px;
+
+                    h3 {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        .sidebar-area--1 {
+            grid-area: sidebar-area--1;
+        }
+
+        .sidebar-area--2 {
+            grid-area: sidebar-area--2;
+        }
+
+        .sidebar-area--1,
+        .sidebar-area--2 {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            gap: 32px;
+        }
+
+        .sidebar-area--2 {
+            padding-top: 56px;
+        }
+
+        .row-2__column {
+            grid-area: row-2__column;
+            display: block;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .content-section--category {
+        .row-8__article-with-image-and-list {
+            .tag-container {
+                width: calc(100% - 48px);
+                margin-left: 48px;
+            }
+
+            .news-with-image-and-list {
+                align-self: flex-end;
+                width: calc(100% - 48px);
+                gap: 16px;
+
+                .article-list-left {
+                    width: 210px;
+
+                    .extra-small-article {
+                        width: 210px;
+                    }
+                }
+
+                .overlay-helper {
+                    width: calc(100% - 20px);
+                    left: 10px;
+
+                    h3 {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(e1, "screen") {
+    .content-section--category {
+        .row-8__article-with-image-and-list {
+            .tag-container {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .news-with-image-and-list {
+                align-self: flex-start;
+                width: 100%;
+                gap: 32px;
+
+                .article-list-left {
+                    width: 280px;
+
+                    .extra-small-article {
+                        width: 280px;
+                    }
+                }
+
+                .overlay-helper {
+                    width: calc(100% - 20px);
+                    left: 20px;
+
+                    h3 {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

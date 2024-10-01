@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Category</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@1,8..60,500&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/fonts/font-face-imports.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+          integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script defer src="../assets/js/main.js"></script>
+    <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- Include header templaate -->
+<!-- Header component -->
+<header id="main-header" class="container--fluid main-header">
+    <nav id="main-navbar" class="main-navbar">
+        <div class="main-navbar__inner-container">
+            <!-- Import navbar menu -->
+            <!-- Header main navigation -->
+            <ul class="main-navbar__menu">
+                <li class="menu-item"><a href="#">Vijesti</a></li>
+                <li class="menu-item"><a href="#">Sport</a></li>
+                <li class="menu-item active"><a href="#">Život</a></li>
+                <li class="menu-item"><a href="#">Hrvatska</a></li>
+                <li class="menu-item"><a href="#">Video</a></li>
+                <li class="menu-item"><a href="#">Hedonistika</a></li>
+                <li class="menu-item menu-item--has-children">
+                    <a href="#">Ostale rubrike</a>
+                    <ul class="submenu">
+                        <li class="menu-item"><a href="#">Energija i Ekologija</a></li>
+                        <li class="menu-item"><a href="#">1 na 10</a></li>
+                        <li class="menu-item"><a href="#">Vjenčanje</a></li>
+                        <li class="menu-item"><a href="#">Nekretnine</a></li>
+                        <li class="menu-item"><a href="#">Sport 365</a></li>
+                        <li class="menu-item"><a href="#">Turizam</a></li>
+                        <li class="menu-item"><a href="#">Svijet</a></li>
+                        <li class="menu-item"><a href="#">Zdravlje</a></li>
+                        <li class="menu-item"><a href="#">Gastro</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Kalendar</a></li>
+            </ul>
+
+            <!-- Import search section (desktop) -->
+            <!-- Header navigation search (desktop) -->
+            <div class="main-navbar__search">
+                <form action="" role="search" method="get" class="main-navbar__search-form">
+                    <label>
+                        <input type="text" name="main_navbar_search_field" id="main_navbar_search_field"
+                               class="main-navbar__search__field" value=""/>
+                    </label>
+                    <input type="submit" class="main-navbar__search-submit" value="Traži">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <section class="header-brand-nav-container">
+        <!-- Import header brand section -->
+        <!-- Header brand container for mobile & tablet -->
+        <a href="homepage_1.html" class="logo-container">
+            <img src="../assets/images/logo/logo_svijetla.svg" alt="Dalmatinski portal" class="logo--small">
+        </a>
+
+        <!-- Import mobile menu open button -->
+        <!-- Header navigation mobile open button -->
+        <a href="#" class="hamburger-menu-toggle">
+            <!-- Hamburger menu icon -->
+            <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1.38477H22" stroke="#ECF0F1" stroke-width="2"/>
+                <path d="M0 11.3848H22" stroke="#ECF0F1" stroke-width="2"/>
+                <path d="M0 21.3848H22" stroke="#ECF0F1" stroke-width="2"/>
+            </svg>
+        </a>
+    </section>
+
+    <section class="desktop-hero-section">
+        <!-- Import desktop logo section -->
+        <!-- Header brand container for desktop -->
+        <a href="/homepage_1.html" class="logo-container--desktop">
+            <img src="../assets/images/logo/logo_tamna.svg" alt="Dalmatinski portal" class="logo--big">
+        </a>
+        <!-- Import header hero section -->
+        <!-- Header hero section -->
+        <a href="#" class="header-hero-section">
+            <img src="/images/2023-04-14-23-56-320-.jpg.png" alt="Test ad banner">
+        </a>
+    </section>
+
+    <!-- Import off-canvas section -->
+    <!-- Off canvas menu -->
+    <section class="off-canvas__container">
+
+        <!-- Import off-canvas header -->
+        <!-- Off-canvas menu header part with logo & close button -->
+        <header class="off-canvas__header">
+            <a href="homepage_1.html" class="off-canvas__logo-container">
+                <img src="../assets/images/logo/logo_footer.svg" alt="Dalmatinski portal">
+                <img src="../assets/images/logo/logo_svijetla.svg" class="off-canvas-logo--hover"
+                     alt="Dalmatinski portal">
+            </a>
+            <a href="#" class="off-canvas__close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <path d="M1 1.38867L23 23.3849" stroke="#ECF0F1" stroke-width="2"/>
+                    <path d="M1 23.2207L22.9027 1.38474" stroke="#ECF0F1" stroke-width="2"/>
+                </svg>
+            </a>
+        </header>
+
+        <!-- Import search -->
+        <!-- Off-canvas menu search part -->
+        <div class="off-canvas__search-container">
+            <input type="text" class="off-canvas__search-input"/>
+        </div>
+
+        <!-- Import navigation -->
+        <!-- Off-canvas menu navigation part -->
+        <nav class="off-canvas__menu-container">
+            <ul class="off-canvas__menu">
+                <li class="menu-item"><a href="#">Vijesti</a></li>
+                <li class="menu-item"><a href="#">Sport</a></li>
+                <li class="menu-item active"><a href="#">Život</a></li>
+                <li class="menu-item"><a href="#">Hrvatska</a></li>
+                <li class="menu-item"><a href="#">Video</a></li>
+                <li class="menu-item"><a href="#">Hedonistika</a></li>
+                <li class="menu-item"><a href="#">Energija i Ekologija</a></li>
+                <li class="menu-item"><a href="#">1 na 10</a></li>
+                <li class="menu-item"><a href="#">Vjenčanje</a></li>
+                <li class="menu-item"><a href="#">Nekretnine</a></li>
+                <li class="menu-item"><a href="#">Sport 365</a></li>
+                <li class="menu-item"><a href="#">Turizam</a></li>
+                <li class="menu-item"><a href="#">Svijet</a></li>
+                <li class="menu-item"><a href="#">Zdravlje</a></li>
+                <li class="menu-item"><a href="#">Gastro</a></li>
+                <li class="menu-item"><a href="#">-</a></li>
+                <li class="menu-item"><a href="#">Tjedni pregled</a></li>
+                <li class="menu-item"><a href="#">Dupli osvrt</a></li>
+                <li class="menu-item"><a href="#">Centar izvrsnosti</a></li>
+                <li class="menu-item"><a href="#">Timbar na libar</a></li>
+                <li class="menu-item"><a href="#">Komentar utakmice</a></li>
+                <li class="menu-item"><a href="#">SVE TEME</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Import sticky off-canvas toggler (on scroll) -->
+    <!-- Sticky off-canvas toggler on scroll -->
+    <a href="#" class="sticky-off-canvas-toggler" role="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none">
+            <circle cx="19.1015" cy="19.4184" r="9.47063" fill="#ECF0F1"/>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M38.0427 19.4188C38.0427 29.8798 29.5624 38.3601 19.1014 38.3601C8.64045 38.3601 0.160156 29.8798 0.160156 19.4188C0.160156 8.95783 8.64045 0.477539 19.1014 0.477539C29.5624 0.477539 38.0427 8.95783 38.0427 19.4188ZM19.1014 33.6247C26.9471 33.6247 33.3074 27.2645 33.3074 19.4188C33.3074 11.5731 26.9471 5.21285 19.1014 5.21285C11.2557 5.21285 4.89547 11.5731 4.89547 19.4188C4.89547 27.2645 11.2557 33.6247 19.1014 33.6247Z"
+                  fill="#D7D7D7"/>
+        </svg>
+    </a>
+</header>
+
+
+<article id="content-section" class="container--fluid content-section content-section--category">
+
+    <div class="row-1__landscape-banner">
+        <!-- Landscape banner component -->
+        <a href="#">
+            <img src="/images/1aafcc976ef7d8c780139326d6c12432.png" alt="">
+        </a>
+    </div>
+    <div class="row-1__square-banner">
+        <!-- Square banner - variation 1 -->
+        <a href="#" class="square-banner">
+            <img src="/images/Image.png" alt=""/>
+        </a>
+    </div>
+
+    <div class="row-2__main-news">
+        <a href="#" class="main-news-box main-news-box--content-on-image">
+            <div class="content">
+                <!-- Tag(s) and publishing date -->
+                <div class="meta-container">
+                    <div href="#" class="aras-tag">Aktualno</div>
+                    <div href="#" class="aras-label--white aras-label--underlined">Prije 15 min</div>
+                </div>
+
+                <!-- Article title -->
+                <div class="category-aktualni-title">
+                    <h2><span>KAOS KOD OPĆINE</span> Dvije prometne u pola sata, ozlijeđeni motociklisti</h2>
+
+                    <!-- Subtitle -->
+                    <h3>Promet u Solinskoj ulici blokiran već sat vremena</h3>
+                </div>
+            </div>
+            <!-- Article's featured image or gallery -->
+            <div class="featured-image-container">
+                <img src="/content/thumbs/83ae7f68c7718cdf60edc718d55cae36.jpg" alt="Article title">
+                <div class="aras-promo--big">Promo</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="row-2__news-4">
+        <!-- News 4 article -->
+        <div class="news-4-article">
+            <img src="/content/thumbs/13f76e1597b2b596f3ccc03da30517c1.jpg" alt="">
+            <div class="overlay-helper">
+                <div class="tags-header">
+                    <a href="#" class="aras-tag ">Stara Splitska kupališta</a>
+                </div>
+                <h3><a href="#">Ovčice su se počele uređivati pedesetih godina prošlog stoljeća</a></h3>
+                <a href="#">Piše <span>Goran Borčić</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-2__column">
+        <!-- Column - variation 1 -->
+        <div class="column-box column-box--without-border">
+            <div class="column-box__content">
+                <div class="column-box__avatar-container">
+                    <img src="/images/9ff71418a187666c6418d519771f3092.png" alt="">
+                </div>
+                <div class="name-container">
+                    <a href="#" class="aras-tag aras-tag--white-outline">Tomislav Pili</a>
+                </div>
+                <div class="news-5-container">
+                    <a href="#" class="news-5-article">
+                        <h4>Evo kako danas izgleda mjesto odigravanja Hajdukove ...</h4>
+                    </a>
+                    <a href="#" class="news-5-article">
+                        <h4>Ubojstvo u Zagrebu: Policija otkrila što se događalo u klubu Ritz</h4>
+                    </a>
+                    <a href="#" class="news-5-article">
+                        <h4>Grad Trogir osigurava maturantima besplatne e-pripreme za državnu ...</h4>
+                    </a>
+                    <a href="#" class="news-5-article">
+                        <h4>Evo kako danas izgleda mjesto odigravanja Hajdukove ...</h4>
+                    </a>
+                </div>
+                <a href="#" class="aras-btn">Učitaj više</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-3__tag-container m-20">
+        <div class="tag-container">
+            <a href="#" class="aras-tag ">Vijesti</a>
+            <a href="#" class="aras-tag aras-tag--red-outline">Najnovije</a>
+            <a href="#" class="aras-tag aras-tag--red-outline">Najčitanije</a>
+        </div>
+    </div>
+
+    <div class="row-4__news-3--1 m-20 news-3-container">
+        <!-- "Vijesti" News 3 article module with featured articles -->
+        <a href="#" class="news-3-big-article">
+            <header>
+                <div class="aras-promo--medium">Promo</div>
+                <img src="/content/thumbs/f8985eb021e28a9abdaedcabde65fd50.jpg" alt="Article title">
+            </header>
+            <h3><span>KAOS KOD OPĆINE</span> Dvije prometne u pola sata, ozljeđeni motociklisti</h3>
+            <p>Promet u Solinskoj ulici blokiran već sat vremena</p>
+        </a>
+    </div>
+
+    <div class="row-4__news-3--2 m-20 news-3-container">
+        <!-- "Vijesti" News 3 article module with featured articles -->
+        <a href="#" class="news-3-big-article">
+            <header>
+                <div class="aras-promo--medium">Promo</div>
+                <img src="/content/thumbs/f8985eb021e28a9abdaedcabde65fd50.jpg" alt="Article title">
+            </header>
+            <h3><span>KAOS KOD OPĆINE</span> Dvije prometne u pola sata, ozljeđeni motociklisti</h3>
+            <p>Promet u Solinskoj ulici blokiran već sat vremena</p>
+        </a>
+    </div>
+
+    <div class="row-4__news-3--3 m-20 news-3-container">
+        <!-- "Vijesti" News 3 article module with featured articles -->
+        <a href="#" class="news-3-big-article">
+            <header>
+                <div class="aras-promo--medium">Promo</div>
+                <img src="/content/thumbs/f8985eb021e28a9abdaedcabde65fd50.jpg" alt="Article title">
+            </header>
+            <h3><span>KAOS KOD OPĆINE</span> Dvije prometne u pola sata, ozljeđeni motociklisti</h3>
+            <p>Promet u Solinskoj ulici blokiran već sat vremena</p>
+        </a>
+    </div>
+
+    <div class="row--only-mobile">
+        <!-- Kaufland section -->
+        <div class="kaufland-section">
+            <header class="kaufland-section__header">
+                <a href="" class="kaufland-logo-container">
+                    <img src="/images/kaufland-logo.svg" alt="" class="kaufland-logo" width="175" height="48">
+                </a>
+                <div class="kaufland-section__header__navigation">
+                    <a href="#" class="kaufland-prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M29 15C29 22.732 22.732 29 15 29C7.26802 29 1 22.732 1 15C1 7.26801 7.26801 0.999999 15 0.999997C22.732 0.999996 29 7.26801 29 15Z"
+                                stroke="#E44D42" stroke-width="2"/>
+                            <path d="M16.5003 21L10.667 15.1667L16.5003 9.33333" stroke="#E44D42" stroke-width="2"
+                                  stroke-miterlimit="3.8637" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="kaufland-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M1 15C1 7.26801 7.26801 1 15 0.999999C22.732 0.999999 29 7.26801 29 15C29 22.732 22.732 29 15 29C7.26801 29 1 22.732 1 15Z"
+                                stroke="#E44D42" stroke-width="2"/>
+                            <path d="M13.4997 9L19.333 14.8333L13.4997 20.6667" stroke="#E44D42" stroke-width="2"
+                                  stroke-miterlimit="3.8637" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </header>
+            <div class="kaufland-section__carousel" data-carousel-id="1">
+                <a href="#" class="kaufland-banner">
+                    <img src="/images/2e820390d739902fd0d3b4f1c62b7436.png" alt="">
+                </a>
+                <a href="#" class="kaufland-banner">
+                    <img src="/images/988d0fb181d2a487b477c1168f31cef8.png" alt="">
+                </a>
+                <a href="#" class="kaufland-banner">
+                    <img src="/images/2e820390d739902fd0d3b4f1c62b7436.png" alt="">
+                </a>
+                <a href="#" class="kaufland-banner">
+                    <img src="/images/06764c24457796a61761582e024c9a1f.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-5__news-3--1 news-3-container m-20">
+        <!-- "Vijesti" News 3 article module with featured articles -->
+        <a href="#" class="news-3-big-article">
+            <header>
+                <div class="aras-promo--medium">Promo</div>
+                <img src="/content/thumbs/f8985eb021e28a9abdaedcabde65fd50.jpg" alt="Article title">
+            </header>
+            <h3><span>KAOS KOD OPĆINE</span> Dvije prometne u pola sata, ozljeđeni motociklisti</h3>
+            <p>Promet u Solinskoj ulici blokiran već sat vremena</p>
+        </a>
+    </div>
+
+    <div class="row-5__news-3--2 news-3-container m-20">
+        <!-- "Vijesti" News 3 article module with featured articles -->
+        <a href="#" class="news-3-big-article">
+            <header>
+                <div class="aras-promo--medium">Promo</div>
+                <img src="/content/thumbs/f8985eb021e28a9abdaedcabde65fd50.jpg" alt="Article title">
+            </header>
+            <h3><span>KAOS KOD OPĆINE</span> Dvije prometne u pola sata, ozljeđeni motociklisti</h3>
+            <p>Promet u Solinskoj ulici blokiran već sat vremena</p>
+        </a>
+    </div>
+
+    <div class="row-5__news-3--3 news-3-container m-20">
+        <!-- "Vijesti" News 3 article module with featured articles -->
+        <a href="#" class="news-3-big-article">
+            <header>
+                <div class="aras-promo--medium">Promo</div>
+                <img src="/content/thumbs/f8985eb021e28a9abdaedcabde65fd50.jpg" alt="Article title">
+            </header>
+            <h3><span>KAOS KOD OPĆINE</span> Dvije prometne u pola sata, ozljeđeni motociklisti</h3>
+            <p>Promet u Solinskoj ulici blokiran već sat vremena</p>
+        </a>
+    </div>
+
+    <div class="row--only-mobile m-20">
+        <!-- Square banner - variation 1 -->
+        <a href="#" class="square-banner">
+            <img src="/images/square-banner.png" alt=""/>
+        </a>
+    </div>
+
+    <div class="row-6__news-3--1 news-3-container m-20">
+        <!-- "Vijesti" News 3 article module with featured articles -->
+        <a href="#" class="news-3-big-article">
+            <header>
+                <div class="aras-promo--medium">Promo</div>
+                <img src="/content/thumbs/f8985eb021e28a9abdaedcabde65fd50.jpg" alt="Article title">
+            </header>
+            <h3><span>KAOS KOD OPĆINE</span> Dvije prometne u pola sata, ozljeđeni motociklisti</h3>
+            <p>Promet u Solinskoj ulici blokiran već sat vremena</p>
+        </a>
+    </div>
+
+    <div class="row-6__news-3--2 news-3-container m-20">
+        <!-- "Vijesti" News 3 article module with featured articles -->
+        <a href="#" class="news-3-big-article">
+            <header>
+                <div class="aras-promo--medium">Promo</div>
+                <img src="/content/thumbs/f8985eb021e28a9abdaedcabde65fd50.jpg" alt="Article title">
+            </header>
+            <h3><span>KAOS KOD OPĆINE</span> Dvije prometne u pola sata, ozljeđeni motociklisti</h3>
+            <p>Promet u Solinskoj ulici blokiran već sat vremena</p>
+        </a>
+    </div>
+
+    <div class="row-6__news-3--3 news-3-container m-20">
+        <!-- "Vijesti" News 3 article module with featured articles -->
+        <a href="#" class="news-3-big-article">
+            <header>
+                <div class="aras-promo--medium">Promo</div>
+                <img src="/content/thumbs/f8985eb021e28a9abdaedcabde65fd50.jpg" alt="Article title">
+            </header>
+            <h3><span>KAOS KOD OPĆINE</span> Dvije prometne u pola sata, ozljeđeni motociklisti</h3>
+            <p>Promet u Solinskoj ulici blokiran već sat vremena</p>
+        </a>
+    </div>
+
+    <div class="row--only-mobile m-20">
+        <!-- Square banner - variation 1 -->
+        <a href="#" class="square-banner">
+            <img src="/images/square-banner.png" alt=""/>
+        </a>
+    </div>
+
+    <div class="row-7__kaufland-banners">
+        <!-- Kaufland section -->
+        <div class="kaufland-section">
+            <header class="kaufland-section__header">
+                <a href="" class="kaufland-logo-container">
+                    <img src="/images/kaufland-logo.svg" alt="" class="kaufland-logo" width="175" height="48">
+                </a>
+                <div class="kaufland-section__header__navigation">
+                    <a href="#" class="kaufland-prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M29 15C29 22.732 22.732 29 15 29C7.26802 29 1 22.732 1 15C1 7.26801 7.26801 0.999999 15 0.999997C22.732 0.999996 29 7.26801 29 15Z"
+                                stroke="#E44D42" stroke-width="2"/>
+                            <path d="M16.5003 21L10.667 15.1667L16.5003 9.33333" stroke="#E44D42" stroke-width="2"
+                                  stroke-miterlimit="3.8637" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="kaufland-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path
+                                d="M1 15C1 7.26801 7.26801 1 15 0.999999C22.732 0.999999 29 7.26801 29 15C29 22.732 22.732 29 15 29C7.26801 29 1 22.732 1 15Z"
+                                stroke="#E44D42" stroke-width="2"/>
+                            <path d="M13.4997 9L19.333 14.8333L13.4997 20.6667" stroke="#E44D42" stroke-width="2"
+                                  stroke-miterlimit="3.8637" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </header>
+            <div class="kaufland-section__carousel" data-carousel-id="2">
+                <a href="#" class="kaufland-banner">
+                    <img src="/images/2e820390d739902fd0d3b4f1c62b7436.png" alt="">
+                </a>
+                <a href="#" class="kaufland-banner">
+                    <img src="/images/988d0fb181d2a487b477c1168f31cef8.png" alt="">
+                </a>
+                <a href="#" class="kaufland-banner">
+                    <img src="/images/2e820390d739902fd0d3b4f1c62b7436.png" alt="">
+                </a>
+                <a href="#" class="kaufland-banner">
+                    <img src="/images/06764c24457796a61761582e024c9a1f.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-8__featured-articles m-20">
+        <!-- "Vijesti" News 3 article module with featured articles -->
+        <a href="#" class="news-3-big-article">
+            <header>
+                <div class="aras-promo--medium">Promo</div>
+                <img src="/content/thumbs/f8985eb021e28a9abdaedcabde65fd50.jpg" alt="Article title">
+            </header>
+            <h3><span>KAOS KOD OPĆINE</span> Dvije prometne u pola sata, ozljeđeni motociklisti</h3>
+            <p>Promet u Solinskoj ulici blokiran već sat vremena</p>
+        </a>
+        <div class="tag-container">
+            <a href="#" class="aras-tag ">Vijesti</a>
+            <a href="#" class="aras-tag aras-tag--red-outline hide-on-tablet">Najnovije</a>
+            <a href="#" class="aras-tag aras-tag--red-outline hide-on-tablet">Najčitanije</a>
+        </div>
+        <div class="featured-article-container">
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Hajduk, Stari plac i juniori u propovijedi za svetoga Dujma nadbiskupa ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+        </div>
+    </div>
+
+    <div class="row-8__article-with-image-and-list m-20">
+        <!-- "Vijesti" News 3 article module with featured articles -->
+        <a href="#" class="news-3-big-article">
+            <header>
+                <div class="aras-promo--medium">Promo</div>
+                <img src="/content/thumbs/f8985eb021e28a9abdaedcabde65fd50.jpg" alt="Article title">
+            </header>
+            <h3><span>KAOS KOD OPĆINE</span> Dvije prometne u pola sata, ozljeđeni motociklisti</h3>
+            <p>Promet u Solinskoj ulici blokiran već sat vremena</p>
+        </a>
+        <div class="tag-container">
+            <a href="#" class="aras-tag ">Vijesti</a>
+            <a href="#" class="aras-tag aras-tag--red-outline hide-on-tablet">Najnovije</a>
+            <a href="#" class="aras-tag aras-tag--red-outline hide-on-tablet">Najčitanije</a>
+        </div>
+        <!-- News with image and list module -->
+        <div class="news-with-image-and-list">
+            <div class="article-list-left">
+                <div class="article-list-container">
+                    <a href="#" class="extra-small-article">
+                        <img src="/content/thumbs/aedd2ae5bb758652e2ea2ff57430c124.png" alt="">
+                        <h4>Hajduk, Stari plac i juniori u propovijedi za svetoga ...</h4>
+                    </a>
+                    <a href="#" class="extra-small-article">
+                        <img src="/content/thumbs/241bb50787b1079d29ae93101f42015f.jpg" alt="">
+                        <h4>Tijekom prvog svjetskog rata mladost se okupljala ...</h4>
+                    </a>
+                    <a href="#" class="extra-small-article">
+                        <img src="/content/thumbs/f846cb0df9ae62d7f36b0a1470ebb3c2.jpg" alt="">
+                        <h4>Znate li koje obitelji su se prve kupale na Bačvicama?</h4>
+                    </a>
+                    <a href="#" class="extra-small-article">
+                        <img src="/content/thumbs/13f76e1597b2b596f3ccc03da30517c1.jpg" alt="">
+                        <h4>Tijekom prvog svjetskog rata mladost se okupljala ...</h4>
+                    </a>
+                    <a href="#" class="extra-small-article">
+                        <img src="/content/thumbs/241bb50787b1079d29ae93101f42015f.jpg" alt="">
+                        <h4>Znate li koje obitelji su se prve kupale na Bačvicama?</h4>
+                    </a>
+                </div>
+                <a href="#" class="aras-btn">Više iz kolumne</a>
+            </div>
+            <div class="big-article-container-right small">
+                <img src="/content/thumbs/cd1933346a8cb0e1e2d93865227b10d2.jpg" alt="">
+                <div class="overlay-helper">
+                    <div class="tags-header">
+                        <a href="#" class="aras-tag ">Stara Splitaska kupališta</a>
+                    </div>
+                    <h3><a href="#">Ovčice su se počele uređivati pedesetih godina prošlog stoljeća</a></h3>
+                    <a href="#">Piše <span>Goran Borčić</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row--only-mobile m-20 without-border">
+        <!-- "Vijesti" News 3 article module with featured articles -->
+        <a href="#" class="news-3-big-article">
+            <header>
+                <div class="aras-promo--medium">Promo</div>
+                <img src="/content/thumbs/f8985eb021e28a9abdaedcabde65fd50.jpg" alt="Article title">
+            </header>
+            <h3><span>KAOS KOD OPĆINE</span> Dvije prometne u pola sata, ozljeđeni motociklisti</h3>
+            <p>Promet u Solinskoj ulici blokiran već sat vremena</p>
+        </a>
+    </div>
+
+    <div class="row--only-mobile m-20">
+        <!-- Square banner - variation 1 -->
+        <a href="#" class="square-banner">
+            <img src="/images/square-banner.png" alt=""/>
+        </a>
+    </div>
+
+    <div class="row-9__landscape-banner">
+        <!-- News 4 article -->
+        <div class="news-4-article">
+            <img src="/content/thumbs/13f76e1597b2b596f3ccc03da30517c1.jpg" alt="">
+            <div class="overlay-helper">
+                <div class="tags-header">
+                    <a href="#" class="aras-tag ">Stara Splitska kupališta</a>
+                </div>
+                <h3><a href="#">Ovčice su se počele uređivati pedesetih godina prošlog stoljeća</a></h3>
+                <a href="#">Piše <span>Goran Borčić</span></a>
+            </div>
+        </div>
+        <!-- Landscape banner component -->
+        <a href="#">
+            <img src="/images/1aafcc976ef7d8c780139326d6c12432.png" alt="">
+        </a>
+    </div>
+
+    <div class="row--only-mobile m-20 category-column--mobile">
+        <!-- Column - variation 1 -->
+        <div class="column-box column-box--without-border">
+            <div class="column-box__content">
+                <div class="column-box__avatar-container">
+                    <img src="/images/9ff71418a187666c6418d519771f3092.png" alt="">
+                </div>
+                <div class="name-container">
+                    <a href="#" class="aras-tag aras-tag--white-outline">Tomislav Pili</a>
+                </div>
+                <div class="news-5-container">
+                    <a href="#" class="news-5-article">
+                        <h4>Evo kako danas izgleda mjesto odigravanja Hajdukove ...</h4>
+                    </a>
+                    <a href="#" class="news-5-article">
+                        <h4>Ubojstvo u Zagrebu: Policija otkrila što se događalo u klubu Ritz</h4>
+                    </a>
+                    <a href="#" class="news-5-article">
+                        <h4>Grad Trogir osigurava maturantima besplatne e-pripreme za državnu ...</h4>
+                    </a>
+                    <a href="#" class="news-5-article">
+                        <h4>Evo kako danas izgleda mjesto odigravanja Hajdukove ...</h4>
+                    </a>
+                </div>
+                <a href="#" class="aras-btn">Učitaj više</a>
+            </div>
+        </div>
+        <!-- Square banner - variation 1 -->
+        <a href="#" class="square-banner">
+            <img src="/images/square-banner.png" alt=""/>
+        </a>
+    </div>
+
+    <div class="row-10__featured-articles--1 m-20">
+        <div class="tag-container">
+            <a href="#" class="aras-tag ">Vijesti</a>
+            <a href="#" class="aras-tag aras-tag--red-outline hide-on-tablet">Najnovije</a>
+            <a href="#" class="aras-tag aras-tag--red-outline hide-on-tablet">Najčitanije</a>
+        </div>
+        <div class="featured-article-container">
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Hajduk, Stari plac i juniori u propovijedi za svetoga Dujma nadbiskupa ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+        </div>
+        <!-- Square banner - variation 1 -->
+        <a href="#" class="square-banner border">
+            <img src="/images/square-banner.png" alt=""/>
+        </a>
+    </div>
+
+    <div class="row--only-mobile extra-news-with-image-and-list--only-mobile">
+        <!-- News with image and list module -->
+        <div class="news-with-image-and-list">
+            <div class="article-list-left">
+                <div class="article-list-container">
+                    <a href="#" class="extra-small-article">
+                        <img src="/content/thumbs/aedd2ae5bb758652e2ea2ff57430c124.png" alt="">
+                        <h4>Hajduk, Stari plac i juniori u propovijedi za svetoga ...</h4>
+                    </a>
+                    <a href="#" class="extra-small-article">
+                        <img src="/content/thumbs/241bb50787b1079d29ae93101f42015f.jpg" alt="">
+                        <h4>Tijekom prvog svjetskog rata mladost se okupljala ...</h4>
+                    </a>
+                    <a href="#" class="extra-small-article">
+                        <img src="/content/thumbs/f846cb0df9ae62d7f36b0a1470ebb3c2.jpg" alt="">
+                        <h4>Znate li koje obitelji su se prve kupale na Bačvicama?</h4>
+                    </a>
+                    <a href="#" class="extra-small-article">
+                        <img src="/content/thumbs/13f76e1597b2b596f3ccc03da30517c1.jpg" alt="">
+                        <h4>Tijekom prvog svjetskog rata mladost se okupljala ...</h4>
+                    </a>
+                    <a href="#" class="extra-small-article">
+                        <img src="/content/thumbs/241bb50787b1079d29ae93101f42015f.jpg" alt="">
+                        <h4>Znate li koje obitelji su se prve kupale na Bačvicama?</h4>
+                    </a>
+                </div>
+                <a href="#" class="aras-btn">Više iz kolumne</a>
+            </div>
+            <div class="big-article-container-right">
+                <img src="/content/thumbs/cd1933346a8cb0e1e2d93865227b10d2.jpg" alt="">
+                <div class="overlay-helper">
+                    <div class="tags-header">
+                        <a href="#" class="aras-tag ">Stara Splitaska kupališta</a>
+                    </div>
+                    <h3><a href="#">Ovčice su se počele uređivati pedesetih godina prošlog stoljeća</a></h3>
+                    <a href="#">Piše <span>Goran Borčić</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row--only-mobile m-20">
+        <!-- Square banner - variation 1 -->
+        <a href="#" class="square-banner">
+            <img src="/images/square-banner.png" alt=""/>
+        </a>
+    </div>
+
+    <div class="row-10__featured-articles--2 m-20">
+        <div class="tag-container">
+            <a href="#" class="aras-tag ">Vijesti</a>
+            <a href="#" class="aras-tag aras-tag--red-outline hide-on-tablet">Najnovije</a>
+            <a href="#" class="aras-tag aras-tag--red-outline hide-on-tablet">Najčitanije</a>
+        </div>
+        <div class="featured-article-container">
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Hajduk, Stari plac i juniori u propovijedi za svetoga Dujma nadbiskupa ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+        </div>
+        <!-- Square banner - variation 1 -->
+        <a href="#" class="square-banner">
+            <img src="/images/square-banner.png" alt=""/>
+        </a>
+    </div>
+
+    <div class="row-10__featured-articles--3 m-20">
+        <div class="tag-container border">
+            <a href="#" class="aras-tag ">Vijesti</a>
+            <a href="#" class="aras-tag aras-tag--red-outline hide-on-tablet">Najnovije</a>
+            <a href="#" class="aras-tag aras-tag--red-outline hide-on-tablet">Najčitanije</a>
+        </div>
+        <div class="featured-article-container">
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Hajduk, Stari plac i juniori u propovijedi za svetoga Dujma nadbiskupa ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+        </div>
+        <!-- Square banner - variation 1 -->
+        <a href="#" class="square-banner">
+            <img src="/images/square-banner.png" alt=""/>
+        </a>
+    </div>
+
+    <div class="row--only-mobile m-20 extra-featured-article--mobile">
+        <div class="tag-container border">
+            <a href="#" class="aras-tag ">Vijesti</a>
+            <a href="#" class="aras-tag aras-tag--red-outline hide-on-tablet">Najnovije</a>
+            <a href="#" class="aras-tag aras-tag--red-outline hide-on-tablet">Najčitanije</a>
+        </div>
+        <div class="featured-article-container">
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Hajduk, Stari plac i juniori u propovijedi za svetoga Dujma nadbiskupa ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+            <!-- Featured article -->
+            <a href="#" class="featured-article ">
+                <!-- header element for fitting the image in the specified dimension -->
+                <header>
+                    <div class="aras-promo--small">Promo</div>
+                    <img src="/content/thumbs/1c5fc4e702f7d1292eb68aa4c631c43b.jpg" alt="Article title">
+                </header>
+                <h3>Pozlilo ženi na misnom slavlju, prvi u pomoć joj priskočio ravnatelj ...</h3>
+            </a>
+        </div>
+        <!-- Square banner - variation 1 -->
+        <a href="#" class="square-banner">
+            <img src="/images/square-banner.png" alt=""/>
+        </a>
+    </div>
+
+    <div class="row-11__article-with-image-and-list">
+        <div class="tag-container">
+            <a href="#" class="aras-tag ">Vijesti</a>
+            <a href="#" class="aras-tag aras-tag--red-outline hide-on-tablet">Najnovije</a>
+            <a href="#" class="aras-tag aras-tag--red-outline hide-on-tablet">Najčitanije</a>
+        </div>
+        <!-- News with image and list module -->
+        <div class="news-with-image-and-list">
+            <div class="article-list-left">
+                <div class="article-list-container">
+                    <a href="#" class="extra-small-article">
+                        <img src="/content/thumbs/aedd2ae5bb758652e2ea2ff57430c124.png" alt="">
+                        <h4>Hajduk, Stari plac i juniori u propovijedi za svetoga ...</h4>
+                    </a>
+                    <a href="#" class="extra-small-article">
+                        <img src="/content/thumbs/241bb50787b1079d29ae93101f42015f.jpg" alt="">
+                        <h4>Tijekom prvog svjetskog rata mladost se okupljala ...</h4>
+                    </a>
+                    <a href="#" class="extra-small-article">
+                        <img src="/content/thumbs/f846cb0df9ae62d7f36b0a1470ebb3c2.jpg" alt="">
+                        <h4>Znate li koje obitelji su se prve kupale na Bačvicama?</h4>
+                    </a>
+                    <a href="#" class="extra-small-article">
+                        <img src="/content/thumbs/13f76e1597b2b596f3ccc03da30517c1.jpg" alt="">
+                        <h4>Tijekom prvog svjetskog rata mladost se okupljala ...</h4>
+                    </a>
+                    <a href="#" class="extra-small-article">
+                        <img src="/content/thumbs/241bb50787b1079d29ae93101f42015f.jpg" alt="">
+                        <h4>Znate li koje obitelji su se prve kupale na Bačvicama?</h4>
+                    </a>
+                </div>
+                <a href="#" class="aras-btn">Više iz kolumne</a>
+            </div>
+            <div class="big-article-container-bottom">
+                <img src="/content/thumbs/cd1933346a8cb0e1e2d93865227b10d2.jpg" alt="">
+                <div class="overlay-helper">
+                    <div class="tags-header">
+                        <a href="#" class="aras-tag ">Stara Splitaska kupališta</a>
+                    </div>
+                    <h3><a href="#">Ovčice su se počele uređivati pedesetih godina prošlog stoljeća</a></h3>
+                    <a href="#">Piše <span>Goran Borčić</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-area--1">
+        <!-- Square banner - variation 1 -->
+        <a href="#" class="square-banner">
+            <img src="/images/639bf5b56dbf441b2f6e6955dac7ed89.png" alt=""/>
+        </a>
+        <!-- Square banner - variation 1 -->
+        <a href="#" class="square-banner">
+            <img src="/images/639bf5b56dbf441b2f6e6955dac7ed89.png" alt=""/>
+        </a>
+        <!-- Square banner - variation 1 -->
+        <a href="#" class="square-banner list">
+            <img src="/images/915ecb1d9aa448799f1f23471f16d53f.png" alt=""/>
+        </a>
+    </div>
+
+    <div class="sidebar-area--2">
+        <!-- Square banner - variation 1 -->
+        <a href="#" class="square-banner">
+            <img src="/images/639bf5b56dbf441b2f6e6955dac7ed89.png" alt=""/>
+        </a>
+        <!-- Square banner - variation 1 -->
+        <a href="#" class="square-banner">
+            <img src="/images/639bf5b56dbf441b2f6e6955dac7ed89.png" alt=""/>
+        </a>
+        <!-- Square banner - variation 1 -->
+        <a href="#" class="square-banner">
+            <img src="/images/639bf5b56dbf441b2f6e6955dac7ed89.png" alt=""/>
+        </a>
+        <!-- Square banner - variation 1 -->
+        <a href="#" class="square-banner">
+            <img src="/images/639bf5b56dbf441b2f6e6955dac7ed89.png" alt=""/>
+        </a>
+        <!-- Square banner - variation 1 -->
+        <a href="#" class="square-banner">
+            <img src="/images/639bf5b56dbf441b2f6e6955dac7ed89.png" alt=""/>
+        </a>
+    </div>
+</article>
+
+<!-- Include footer template -->
+<!-- Footer container -->
+<footer id="main-footer" class="container--fluid main-footer">
+    <div class="main-footer__inner-container">
+
+        <!-- Import footer logo container template -->
+        <a href="homepage_1.html" class="main-footer__logo-container">
+            <img src="../assets/images/logo/logo_footer.svg" alt="Dalmatinski portal">
+            <img src="../assets/images/logo/logo_svijetla.svg" class="footer-logo--hover" alt="Dalmatinski portal">
+        </a>
+
+        <!-- Import footer navbar container template -->
+        <!-- Footer search & navbar section -->
+        <section class="footer-navbar-container">
+
+            <!-- Footer search -->
+            <div class="footer-navbar__search">
+                <form action="" role="search" method="get" class="footer-navbar__search-form">
+                    <label>
+                        <input type="text" name="footer_navbar_search_field" id="footer_navbar_search_field"
+                               class="footer-navbar__search__field" value=""/>
+                    </label>
+                    <input type="submit" class="footer-navbar__search-submit" value="Traži">
+                </form>
+            </div>
+
+            <!-- Footer navigation -->
+            <nav class="footer-navbar__menu-container">
+                <ul class="footer-navbar__menu">
+                    <li class="menu-item"><a href="#">Twitter</a></li>
+                    <li class="menu-item"><a href="#">Facebook</a></li>
+                    <li class="menu-item"><a href="#">Marketing</a></li>
+                    <li class="menu-item"><a href="#">Kontakt</a></li>
+                    <li class="menu-item"><a href="#">Impressum</a></li>
+                    <li class="menu-item"><a href="#">Pravila privatnosti</a></li>
+                </ul>
+            </nav>
+        </section>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var mainNewsContainer = document.querySelector('.row-2__main-news');
+
+        if (mainNewsContainer) {
+            // Set CSS variables with JavaScript
+            function updateDimensions() {
+                // Use var (not const) for cross-browser support
+                var root = document.querySelector(':root');
+                var aspectRatio = 414 / 550;
+                var maxWidth = 1440; // Maximum window width at which the image remains 632px wide
+
+                var mainNewsContainerRect = mainNewsContainer.getBoundingClientRect();
+
+                // Calculate the new image width based on the window width
+                // Not use template expressions for cross-browser support
+                root.style.setProperty('--main-news-box-gallery-width', mainNewsContainerRect.width + 'px');
+                root.style.setProperty('--main-news-box-gallery-height', (mainNewsContainerRect.width * aspectRatio) + 'px');
+            }
+
+            updateDimensions(); // Call the function once immediately
+            window.addEventListener('resize', updateDimensions);
+        }
+    });
+</script>
+</body>
+</html>

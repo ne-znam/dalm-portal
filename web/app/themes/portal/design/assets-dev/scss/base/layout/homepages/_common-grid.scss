@@ -1,0 +1,44 @@
+@use "../../../abstracts/helpers" as *;
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@include breakpoint(tablet, "screen") {
+    .content-section {
+        display: grid;
+        max-width: 100%;
+        width: calc(100% - 64px);
+        margin: 0 auto;
+        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+        grid-template-rows: auto;
+        gap: 16px 32px;
+        grid-auto-flow: row;
+    }
+}
+
+@include breakpoint(desktop, "screen") {
+    .content-section {
+        grid-template-columns: repeat(
+            auto-fit,
+                minmax(var(--desktop-initial-column-width), 1fr)
+        );
+        gap: 16px 32px;
+        max-width: 1296px;
+    }
+}
+
+@include breakpoint(xl, "screen") {
+    .content-section {
+        grid-template-columns: repeat(
+            auto-fit,
+                minmax(var(--desktop-max-column-width), 1fr)
+        );
+    }
+}
+
+@include ie-grid {
+
+}

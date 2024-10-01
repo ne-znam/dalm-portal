@@ -1,0 +1,57 @@
+@use "../../abstracts/helpers" as *;
+
+.header-brand-nav-container {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--color-dark-d200);
+
+    .logo-container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: left;
+        align-items: flex-start;
+        gap: 9px;
+        color: var(--color-blue-b100);
+
+        img {
+            width: 167px;
+        }
+    }
+
+    .hamburger-menu-toggle {
+        display: block;
+        color: var(--color-blue-b100);
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+// 812px
+@include breakpoint(tablet, "screen") {
+    .header-brand-nav-container {
+        padding: 15px 32px;
+        justify-content: flex-end;
+
+        .logo-container {
+            display: none;
+        }
+    }
+}
+
+// 64rem ~1024px
+@include breakpoint(md, "screen") {
+
+    .header-brand-nav-container {
+        display: none;
+
+        .hamburger-menu-toggle {
+            display: none;
+        }
+    }
+}

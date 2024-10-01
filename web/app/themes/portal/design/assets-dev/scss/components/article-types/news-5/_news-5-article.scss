@@ -1,0 +1,65 @@
+@use "../../../abstracts/helpers" as *;
+
+.news-5-article {
+    display: block;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--color-grey-g100);
+    margin-bottom: 8px;
+    text-decoration: none;
+    transition: var(--base-transition);
+
+    // Disable bottom border and margin at the last article box  
+    &:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    h4 {
+        color: var(--color-dark-d200);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        margin-bottom: 3px;
+        transition: var(--base-transition);
+    }
+
+    /**
+     * When the label is in news 5 module under h4 title,
+     * the label should placed 1px to top, and give 1px
+     * bottom, that it has the same height
+     */
+    & h4 + .aras-label--red,
+    & h4 + .aras-label--white {
+        margin-top: -1px;
+        margin-bottom: 1px;
+    }
+
+    &:hover {
+
+        h4 {
+            color: var(--color-link-hover);
+        }
+    }
+}
+
+@include breakpoint(md, "screen") {
+    .news-5-article--homepage {
+
+        h4 {
+            margin-bottom: 4px;
+        }
+
+        h4 + .aras-label--red,
+        h4 + .aras-label--white {
+            margin-bottom: 0;
+        }
+    }
+
+    .news-5-article--homepage:last-of-type {
+        padding-bottom: 2px;
+    }
+
+    .news-5-article--homepage + .aras-btn {
+        padding: 16px 0 15px 0;
+    }
+}

@@ -1,0 +1,83 @@
+@use "../../abstracts/helpers" as *;
+
+.news-3-container {
+    width: calc(100% - 40px);
+
+    .news-3-big-article + .featured-article-container {
+
+        margin-top: 15px;
+    }
+
+    .featured-article:nth-of-type(5) {
+        margin-bottom: 20px !important;
+    }
+}
+
+.tag-container {
+    padding-top: 3px;
+    margin-bottom: 26px;
+
+    &.border {
+        padding-top: 20px;
+        border-top: 1px solid var(--color-grey-g100);
+    }
+}
+
+.columns-on-mobile {
+    margin-top: 57px;
+}
+
+.aras-tag:not(:last-of-type) {
+    margin-right: 7px;
+}
+
+.row--only-mobile {
+    display: block;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-grey-g100);
+}
+
+.without-border {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.m-20 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@include breakpoint(tablet, "screen") {
+
+    .news-3-big-article + .featured-article-container {
+        margin-top: 0;
+    }
+
+    .tag-container {
+        margin-bottom: 22px;
+    }
+
+    .m-20 {
+        margin-left: unset;
+        margin-right: unset;
+    }
+
+    .hide-on-tablet {
+        display: none;
+    }
+
+    .news-3-container {
+        width: 100%;
+
+        .tag-container {
+
+            .aras-tag--red-outline {
+                display: none;
+            }
+        }
+    }
+
+    .row--only-mobile {
+        display: none;
+    }
+}

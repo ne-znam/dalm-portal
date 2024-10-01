@@ -1,0 +1,100 @@
+@use "../../../abstracts/helpers" as *;
+
+.mod-search-tags {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.mod-search-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: left;
+    gap: 20px;
+    width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+@include breakpoint(xs, "screen") {
+    .mod-search-content {
+
+        .news-3-big-article {
+            width: calc(50% - 17px);
+        }
+    }
+}
+
+@include breakpoint(tablet, "screen") {
+    .content-section--search {
+        gap: 8px 32px;
+        grid-template-areas:
+            "row-1__landscape-banner row-1__landscape-banner row-1__landscape-banner"
+            "mod-search-tags mod-search-tags mod-search-tags"
+            "mod-search-content mod-search-content mod-search-content";
+    }
+
+    .mod-search-tags {
+        grid-area: mod-search-tags;
+        width: 100%;
+        margin-left: unset;
+        margin-right: unset;
+        margin-top: 0;
+    }
+
+    .mod-search-content {
+        grid-area: mod-search-content;
+        width: 100%;
+        margin-left: unset;
+        margin-right: unset;
+        margin-top: 8px;
+        gap: 20px 32px;
+    }
+}
+
+@include breakpoint(tablet, "screen") {
+    .mod-search-content {
+        margin-bottom: 64px;
+    }
+}
+
+@include breakpoint(md, "screen") {
+    .mod-search-content {
+
+        .news-3-big-article {
+            width: calc(33.333% - 22px);
+        }
+    }
+}
+
+@include breakpoint(desktop, "screen") {
+    .content-section--search {
+        gap: 8px 32px;
+        grid-template-areas:
+            "row-1__landscape-banner row-1__landscape-banner row-1__landscape-banner row-1__square-banner"
+            "mod-search-tags mod-search-tags mod-search-tags mod-search-tags"
+            "mod-search-content mod-search-content mod-search-content mod-search-content";
+    }
+}
+
+@include breakpoint(e1, "screen") {
+    .content-section--search {
+        .row-1__square-banner {
+            width: 300px;
+        }
+    }
+
+    .mod-search-content {
+
+        .news-3-big-article {
+            width: 300px;
+        }
+    }
+}
+
+@include ie-grid {
+
+}

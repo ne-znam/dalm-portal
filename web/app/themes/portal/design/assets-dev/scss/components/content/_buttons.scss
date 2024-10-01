@@ -1,0 +1,46 @@
+.aras-btn {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 0 15px 0;
+    background-color: var(--color-blue-b100);
+    color: var(--color-dark-d200);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+    transition: var(--base-transition);
+
+    &:hover {
+        background-color: var(--color-link-hover);
+        color: var(--color-blue-b100);
+    }
+
+
+    &.aras-btn--disabled {
+        background-color: var(--color-grey-g100);
+        color: var(--color-grey-g200);
+        // disable click
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+
+    &.aras-btn--red {
+        background-color: var(--color-primary-red);
+        color: var(--color-blue-b100);
+
+        &:hover {
+            background-color: var(--color-blue-b100);
+            color: var(--color-link-hover);
+            border: 1px solid var(--color-link-hover);
+        }
+    }
+
+    // Modifier: bigger height with line-height (e.g. button at the end of news 5 module)
+    &.aras-btn--ln-normal {
+        line-height: normal;
+    }
+}

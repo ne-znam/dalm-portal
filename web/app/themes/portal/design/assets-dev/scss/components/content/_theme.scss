@@ -1,0 +1,67 @@
+.theme-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 19px;
+    max-width: 272px;
+
+    .theme-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        padding-left: 12px;
+
+        &__image-container {
+            display: flex;
+            align-content: stretch;
+            align-items: stretch;
+            overflow: hidden;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+
+            // All image behaviors are the same
+            img {
+                object-fit: cover;
+                flex: 1;
+            }
+
+            // Create a pseudo element for "desaturating"
+            // it is a 30% opaque layer between the image and
+            // the title, it makes the colors of image more soft
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 160px;
+                height: 160px;
+                border-radius: 50%;
+                top: 50%;
+                left: calc(50% + 6px);
+                transform: translate(-50%, -50%);
+                background-color: rgba(217, 217, 217, .3);
+            }
+        }
+
+        &__title {
+            position: absolute;
+            top: 50%;
+            left: calc(50% + 6px);
+            width: 85%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: var(--color-dark-d200);
+            transition: var(--base-transition);
+        }
+
+        &:hover {
+            .theme-box__title {
+                color: var(--color-link-hover);
+            }
+        }
+    }
+}

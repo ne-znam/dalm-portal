@@ -1,0 +1,18 @@
+@use "../../abstracts/helpers" as *;
+
+.portrait-banner {
+    display: flex;
+    align-content: stretch;
+    align-items: stretch;
+
+    img {
+        object-fit: cover;
+        flex: 1;
+        transition: var(--base-transition);
+    }
+
+    &:hover {
+
+        @include image-hover;
+    }
+}

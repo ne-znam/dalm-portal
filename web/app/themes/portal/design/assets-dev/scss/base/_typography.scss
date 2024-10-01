@@ -1,0 +1,430 @@
+@use '../abstracts/helpers' as *;
+
+@font-face {
+    font-family: 'Instrument Sans Condensed';
+    src: url('../fonts/InstrumentSansCondensed-Regular.eot');
+    src: url('../fonts/InstrumentSansCondensed-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSansCondensed-Regular.woff2') format('woff2'),
+    url('../fonts/InstrumentSansCondensed-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans SemiCondensed';
+    src: url('../fonts/InstrumentSansSemiCondensed-BoldItalic.eot');
+    src: url('../fonts/InstrumentSansSemiCondensed-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSansSemiCondensed-BoldItalic.woff2') format('woff2'),
+    url('../fonts/InstrumentSansSemiCondensed-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans SemiCondensed';
+    src: url('../fonts/InstrumentSansSemiCondensed-Bold.eot');
+    src: url('../fonts/InstrumentSansSemiCondensed-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSansSemiCondensed-Bold.woff2') format('woff2'),
+    url('../fonts/InstrumentSansSemiCondensed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans Condensed';
+    src: url('../fonts/InstrumentSansCondensed-BoldItalic.eot');
+    src: url('../fonts/InstrumentSansCondensed-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSansCondensed-BoldItalic.woff2') format('woff2'),
+    url('../fonts/InstrumentSansCondensed-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans Condensed';
+    src: url('../fonts/InstrumentSansCondensed-Medium.eot');
+    src: url('../fonts/InstrumentSansCondensed-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSansCondensed-Medium.woff2') format('woff2'),
+    url('../fonts/InstrumentSansCondensed-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans SemiCondensed';
+    src: url('../fonts/InstrumentSansSemiCondensed-Italic.eot');
+    src: url('../fonts/InstrumentSansSemiCondensed-Italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSansSemiCondensed-Italic.woff2') format('woff2'),
+    url('../fonts/InstrumentSansSemiCondensed-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans Condensed';
+    src: url('../fonts/InstrumentSansCondensed-SemiBoldItalic.eot');
+    src: url('../fonts/InstrumentSansCondensed-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSansCondensed-SemiBoldItalic.woff2') format('woff2'),
+    url('../fonts/InstrumentSansCondensed-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans Condensed';
+    src: url('../fonts/InstrumentSansCondensed-SemiBold.eot');
+    src: url('../fonts/InstrumentSansCondensed-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSansCondensed-SemiBold.woff2') format('woff2'),
+    url('../fonts/InstrumentSansCondensed-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans Condensed';
+    src: url('../fonts/InstrumentSansCondensed-Bold.eot');
+    src: url('../fonts/InstrumentSansCondensed-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSansCondensed-Bold.woff2') format('woff2'),
+    url('../fonts/InstrumentSansCondensed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans Condensed';
+    src: url('../fonts/InstrumentSansCondensed-MediumItalic.eot');
+    src: url('../fonts/InstrumentSansCondensed-MediumItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSansCondensed-MediumItalic.woff2') format('woff2'),
+    url('../fonts/InstrumentSansCondensed-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans SemiCondensed';
+    src: url('../fonts/InstrumentSansSemiCondensed-Medium.eot');
+    src: url('../fonts/InstrumentSansSemiCondensed-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSansSemiCondensed-Medium.woff2') format('woff2'),
+    url('../fonts/InstrumentSansSemiCondensed-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans Condensed';
+    src: url('../fonts/InstrumentSansCondensed-Italic.eot');
+    src: url('../fonts/InstrumentSansCondensed-Italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSansCondensed-Italic.woff2') format('woff2'),
+    url('../fonts/InstrumentSansCondensed-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans';
+    src: url('../fonts/InstrumentSans-Italic.eot');
+    src: url('../fonts/InstrumentSans-Italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSans-Italic.woff2') format('woff2'),
+    url('../fonts/InstrumentSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans SemiCondensed';
+    src: url('../fonts/InstrumentSansSemiCondensed-MediumItalic.eot');
+    src: url('../fonts/InstrumentSansSemiCondensed-MediumItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSansSemiCondensed-MediumItalic.woff2') format('woff2'),
+    url('../fonts/InstrumentSansSemiCondensed-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans';
+    src: url('../fonts/InstrumentSans-MediumItalic.eot');
+    src: url('../fonts/InstrumentSans-MediumItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSans-MediumItalic.woff2') format('woff2'),
+    url('../fonts/InstrumentSans-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans';
+    src: url('../fonts/InstrumentSans-BoldItalic.eot');
+    src: url('../fonts/InstrumentSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSans-BoldItalic.woff2') format('woff2'),
+    url('../fonts/InstrumentSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans';
+    src: url('../fonts/InstrumentSans-Bold.eot');
+    src: url('../fonts/InstrumentSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSans-Bold.woff2') format('woff2'),
+    url('../fonts/InstrumentSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans SemiCondensed';
+    src: url('../fonts/InstrumentSansSemiCondensed-Regular.eot');
+    src: url('../fonts/InstrumentSansSemiCondensed-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSansSemiCondensed-Regular.woff2') format('woff2'),
+    url('../fonts/InstrumentSansSemiCondensed-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans';
+    src: url('../fonts/InstrumentSans-SemiBold.eot');
+    src: url('../fonts/InstrumentSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSans-SemiBold.woff2') format('woff2'),
+    url('../fonts/InstrumentSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans';
+    src: url('../fonts/InstrumentSans-Medium.eot');
+    src: url('../fonts/InstrumentSans-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSans-Medium.woff2') format('woff2'),
+    url('../fonts/InstrumentSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans';
+    src: url('../fonts/InstrumentSans-SemiBoldItalic.eot');
+    src: url('../fonts/InstrumentSans-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSans-SemiBoldItalic.woff2') format('woff2'),
+    url('../fonts/InstrumentSans-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans';
+    src: url('../fonts/InstrumentSans-Regular.eot');
+    src: url('../fonts/InstrumentSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSans-Regular.woff2') format('woff2'),
+    url('../fonts/InstrumentSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans SemiCondensed';
+    src: url('../fonts/InstrumentSansSemiCondensed-SemiBoldItalic.eot');
+    src: url('../fonts/InstrumentSansSemiCondensed-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSansSemiCondensed-SemiBoldItalic.woff2') format('woff2'),
+    url('../fonts/InstrumentSansSemiCondensed-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans SemiCondensed';
+    src: url('../fonts/InstrumentSansSemiCondensed-SemiBold.eot');
+    src: url('../fonts/InstrumentSansSemiCondensed-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/InstrumentSansSemiCondensed-SemiBold.woff2') format('woff2'),
+    url('../fonts/InstrumentSansSemiCondensed-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/**
+ * Basic typographical definitions based on Figma > Design
+ * System > Typography Page
+ */
+
+// ==================== Header styles ====================
+
+// Heading > H1-1
+h1 {
+    font-family: var(--ff-condensed);
+    font-size: 40px;
+    line-height: 42px;
+    font-weight: 600;
+}
+
+// Heading > H1-2
+.h1-2 {
+    letter-spacing: 0.8px;
+}
+
+// Heading > H2
+h2 {
+    font-family: var(--ff-condensed);
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 500;
+}
+
+// Heading > H2 - Source Serif 4
+.h2-source-serif {
+    font-family: var(--ff-source-serif-4);
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+// Heading - H2 - Small Source Serif 4
+.h2-source-serif--small {
+    font-family: var(--ff-source-serif-4);
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+// Heading - H3-1
+h3 {
+    font-family: var(--ff-condensed);
+    font-size: 28px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+// Heading - H3-2
+.h3-2 {
+    letter-spacing: 0.28px;
+}
+
+// Heading - H3-3
+.h3-3 {
+    line-height: 32px;
+}
+
+// ==================== End Header styles ====================
+
+// Paragraphs
+p {
+    font-family: var(--ff-regular);
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--color-dark-d200);
+    margin-bottom: 26px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    // Bold
+    b,
+    strong {
+        font-weight: 600;
+    }
+
+    // Links in texts
+    a {
+        color: var(--color-dark-d200);
+
+        &:hover {
+            color: var(--color-link-hover);
+        }
+    }
+}
+
+// Citation
+blockquote {
+
+    // Vertical margin between paragraph and blockquote is 16px on mobile
+    // paragraph margin bottom 26px -10px => 16px
+    // For negative margin the element must have relative positioning
+    position: relative;
+    margin-top: -10px;
+
+    p {
+        font-family: var(--ff-source-serif-4);
+        font-size: 26px;
+        font-weight: 500;
+        font-style: italic;
+        line-height: 34px;
+        text-align: center;
+        color: var(--color-dark-d200);
+    }
+
+    cite {
+        font-family: var(--ff-regular);
+        color: var(--color-dark-d200);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 1.08px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 17px;
+        margin-bottom: 24px;
+        text-transform: uppercase;
+    }
+}
+
+@include breakpoint(md, "only screen") {
+
+    p {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 28px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    blockquote {
+        top: -2px;
+
+        p {
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        cite {
+            margin-top: 19px;
+            margin-bottom: 27px;
+            font-size: 20px;
+            letter-spacing: 1.2px;
+        }
+    }
+}
+
+
+.text-below-img {
+    padding-top: 32px !important;
+}
+

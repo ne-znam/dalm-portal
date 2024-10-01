@@ -1,0 +1,182 @@
+@use '../../../abstracts/helpers' as *;
+
+.comment-listing-container {
+
+    h2 {
+        padding-bottom: 14px;
+    }
+
+    .comment-list {
+        margin: 0;
+        padding: 0;
+
+        .comment {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: left;
+            gap: 5px;
+            padding: 18px 0 25px 0;
+            border-top: 1px solid var(--color-grey-g100);
+            border-bottom: 1px solid var(--color-grey-g100);
+
+            .avatar-container {
+                width: 19px;
+                height: 36px;
+                margin-top: 6px;
+                border-radius: 50%;
+                overflow: hidden;
+                flex-shrink: 0;
+                // For image cover
+                display: flex;
+                align-content: stretch;
+                align-items: stretch;
+
+                img {
+                    object-fit: cover;
+                    flex: 1;
+                }
+            }
+
+            .comment-content {
+                margin-left: 0;
+                padding-top: 1px;
+
+                &__header {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: left;
+                    align-items: center;
+                    gap: 9px;
+
+                    &__name {
+                        color: var(--color-neutral-black);
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 22px;
+                        text-decoration: none;
+                        padding-bottom: 1px;
+                    }
+
+                    &__time {
+                        color: var(--color-grey-g200);
+                        font-size: 12px;
+                        font-weight: 500;
+                        line-height: 24px;
+                        letter-spacing: 0.24px;
+                        text-decoration: none;
+                    }
+                }
+
+                &__content {
+
+                    p {
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 24px;
+                    }
+                }
+
+                &__footer {
+                    margin-top: -2px;
+
+                    .comment-content__reactions {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: left;
+                        align-items: center;
+                        gap: 6px;
+
+                        &__like,
+                        &__dislike {
+                            display: flex;
+                            justify-content: left;
+                            align-items: center;
+                            gap: 3px;
+                            color: var(--color-grey-g200);
+                            font-size: 12px;
+                            font-weight: 500;
+                            line-height: 28px;
+                            letter-spacing: 0.72px;
+                            text-decoration: none;
+                        }
+
+                        &__dislike {
+                            svg {
+                                width: 14px;
+                                height: 14px;
+                                margin-top: 2px;
+                            }
+                        }
+                    }
+
+                    &__answers {
+
+                        .show-comment-answers {
+                            display: flex;
+                            justify-content: left;
+                            align-items: center;
+                            text-decoration: none;
+                            color: var(--color-grey-g200);
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 20px;
+                            gap: 4px;
+                            margin-top: 1px;
+
+                            svg {
+                                width: 15px;
+                                height: 15px;
+                                margin-top: -4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(md, "only screen") {
+    .comment-listing-container {
+        margin-bottom: 7px;
+
+        .comment-list {
+            .comment {
+                padding-top: 15px;
+
+                .avatar-container {
+                    width: 36px;
+                    height: 36px;
+                    margin-top: 9px;
+                }
+
+                .comment-content {
+                    margin-left: 5px;
+                    padding-top: 4px;
+
+                    &__header {
+                        gap: 9px;
+                    }
+
+                    &__content {
+                        p {
+                            line-height: 23px;
+                        }
+                    }
+
+                    &__footer {
+                        margin-top: 0;
+
+                        &__answers {
+
+                            .show-comment-answers {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

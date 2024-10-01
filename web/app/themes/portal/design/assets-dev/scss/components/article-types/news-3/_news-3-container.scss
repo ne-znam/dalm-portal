@@ -1,0 +1,60 @@
+@use "../../../abstracts/helpers" as *;
+
+/**
+ * Because it has different vertical and horizontal gap on bigger
+ * screens, we can't define a general container for categories 
+ * and news. Create a dedicated container for news 3 module:
+ */
+.news-3-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    & > div:not([class]) {
+        width: 100%;
+    }
+}
+
+
+@include breakpoint(xs, "screen") {
+
+    .news-3-container.fb-align-flex-start {
+        align-items: center !important;
+    }
+}
+
+// align the cards to the left side
+@include breakpoint(tablet, "only screen") {
+
+    .news-3-container.fb-align-flex-start {
+        align-items: flex-start !important;
+    }
+
+    .news-3-container {
+        flex-direction: row;
+        justify-content: left;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        gap: 16px;
+
+        & > div:not([class]) {
+            width: 245px;
+        }
+    }
+}
+
+@include breakpoint(md, "only screen") {
+
+    .news-3-container {
+        gap: 32px;
+
+        & > div:not([class]) {
+            width: 300px;
+        }
+    }
+}

@@ -1,0 +1,124 @@
+@use "../abstracts/helpers" as *;
+
+/**
+ * This file contains the module modifications
+ * for category pages
+ */
+
+.content-section--category {
+
+    .category-first-section {
+        width: 767px;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: stretch;
+        row-gap: 48px;
+
+        .news-4-article {
+            height: unset;
+            max-height: unset;
+            // 767px - 245px column - 16px gap
+            width: 506px;
+        }
+
+        .column-box.column-box--without-border.mt-0.md-mt-4 {
+            padding-bottom: 0;
+        }
+    }
+
+    .main-sidebar.gap-32.dir-col {
+        display: none;
+    }
+}
+
+@include breakpoint(tablet, "screen") {
+
+    .content-section--category {
+        padding: 0 0 55px 0;
+
+        .general-container {
+            row-gap: 48px;
+            column-gap: 16px;
+
+            .news-3-container {
+                width: 245px;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.category-aktualni-title {
+    &:hover {
+        h2, h3 {
+            color: var(--color-link-hover) !important;
+        }
+    }
+}
+
+@include breakpoint(md, "screen") {
+
+    .content-section--category {
+
+        .general-container {
+            gap: 32px;
+
+            .news-3-container {
+                width: 300px;
+            }
+        }
+
+        .category-first-section {
+            width: 100%;
+            row-gap: 32px;
+
+            .main-news-box.main-news-box--content-on-image {
+                width: 632px;
+                flex-shrink: 0;
+            }
+
+            .news-4-article {
+                display: none;
+            }
+
+            .column-box.column-box--without-border.mt-0.md-mt-4 {
+                width: 300px;
+                flex-shrink: 0;
+            }
+        }
+    }
+}
+
+@include breakpoint(e1, "screen") {
+
+    .content-section--category {
+
+        .category-first-section {
+
+            .news-4-article {
+                display: flex;
+                flex-shrink: 1;
+            }
+        }
+
+        .main-sidebar.gap-32.dir-col {
+            display: flex;
+        }
+    }
+}
+
+@include breakpoint(lg, "screen") {
+
+    .content-section--category {
+
+        .category-first-section {
+            flex-wrap: nowrap;
+
+            .news-4-article {
+                width: 300px;
+                flex-shrink: 0;
+            }
+        }
+    }
+}

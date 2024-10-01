@@ -1,0 +1,59 @@
+.aras-promo {
+
+    &--big {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 60px;
+        height: 19px;
+        background: var(--color-dark-d100);
+        color: var(--color-blue-b100);
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.96px;
+    }
+
+    &--medium {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 50px;
+        height: 17px;
+        background: var(--color-dark-d100);
+        color: var(--color-blue-b100);
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+    }
+
+    &--small {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 40px;
+        height: 12px;
+        background: var(--color-dark-d100);
+        color: var(--color-blue-b100);
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: 0.64px;
+    }
+}

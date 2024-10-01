@@ -1,0 +1,65 @@
+@use "../../../abstracts/helpers" as *;
+
+.extra-small-article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 18px;
+    width: 280px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-blue-b100);
+    text-decoration: none;
+    transition: var(--base-transition);
+
+    img {
+        width: 54px;
+        height: 44px;
+        transition: var(--base-transition);
+    }
+
+    h4 {
+        font-family: var(--ff-regular);
+        line-height: 22px;
+        font-weight: 500;
+        color: var(--color-blue-b100);
+        text-decoration: none;
+        transition: var(--base-transition);
+        font-size: 16px;
+    }
+
+    &:hover {
+
+        @include image-hover;
+
+        h4 {
+            color: var(--color-link-hover);
+        }
+    }
+}
+
+@include breakpoint(tablet, "screen") {
+
+    .extra-small-article {
+
+        h4 {
+            /* 16px / 965px */
+            font-size: 16px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            white-space: pre-wrap;
+        }
+    }
+}
+
+@include breakpoint(desktop, "screen") {
+
+    .extra-small-article {
+
+        h4 {
+            font-size: 16px;
+        }
+    }
+}

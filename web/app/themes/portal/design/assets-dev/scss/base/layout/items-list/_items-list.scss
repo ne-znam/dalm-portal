@@ -1,0 +1,100 @@
+@use "../../../abstracts/helpers" as *;
+
+.mod-items-list-tags {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.mod-items-list-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: left;
+    gap: 20px;
+    width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+}
+
+@include breakpoint(xs, "screen") {
+    .mod-items-list-content {
+
+        .category-card {
+            width: calc(50% - 14px);
+        }
+    }
+}
+
+@include breakpoint(tablet, "screen") {
+    .content-section--items-list {
+        gap: 8 32px;
+        margin-bottom: 32px;
+        grid-template-areas:
+            "row-1__landscape-banner row-1__landscape-banner row-1__landscape-banner"
+            "mod-items-list-tags mod-items-list-tags mod-items-list-tags"
+            "mod-items-list-content mod-items-list-content mod-items-list-content";
+    }
+
+    .mod-items-list-tags {
+        grid-area: mod-items-list-tags;
+        width: 100%;
+        margin-left: unset;
+        margin-right: unset;
+        margin-top: 0;
+    }
+
+    .mod-items-list-content {
+        grid-area: mod-items-list-content;
+        width: 100%;
+        margin-left: unset;
+        margin-right: unset;
+        margin-top: 8px;
+        gap: 20px 32px;
+
+        .category-card {
+            width: calc(50% - 16px);
+        }
+    }
+}
+
+@include breakpoint(md, "screen") {
+    .mod-items-list-content {
+
+        .category-card {
+            width: calc(33.333% - 22px);
+        }
+    }
+}
+
+@include breakpoint(desktop, "screen") {
+    .content-section--items-list {
+        gap: 8 32px;
+        grid-template-areas:
+            "row-1__landscape-banner row-1__landscape-banner row-1__landscape-banner row-1__square-banner"
+            "mod-items-list-tags mod-items-list-tags mod-items-list-tags mod-items-list-tags"
+            "mod-items-list-content mod-items-list-content mod-items-list-content mod-items-list-content";
+    }
+}
+
+@include breakpoint(e1, "screen") {
+    .content-section--items-list {
+        .row-1__square-banner {
+            width: 300px;
+        }
+    }
+
+    .mod-items-list-content {
+
+        .category-card {
+            width: 300px;
+        }
+    }
+}
+
+
+@include ie-grid {
+
+}

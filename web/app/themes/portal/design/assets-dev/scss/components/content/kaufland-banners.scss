@@ -1,0 +1,77 @@
+@use "../../abstracts/helpers" as *;
+
+.kaufland-section {
+    width: 100%;
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+        width: 100%;
+
+        .kaufland-logo {
+            width: 175px;
+            height: 48px;
+        }
+
+        &__navigation {
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+
+    &__carousel {
+        // Fallback - show the elements in a row, when slick is deactivated
+        // (when there are no so many slides, that the screen width, slick deactivates itself)
+        display: flex;
+        justify-content: left;
+        align-items: flex-start;
+        min-width: 0;
+        width: 100%;
+        overflow: hidden;
+
+        .kaufland-banner {
+            display: flex;
+            align-content: stretch;
+            align-items: stretch;
+            overflow: hidden;
+            // Prevent slick's auto resizing
+            flex: 0 0 240px;
+            height: 160px !important;
+            margin-right: 20px !important; // Gap between the banners
+
+            img {
+                object-fit: cover;
+                flex: 1;
+            }
+        }
+    }
+}
+
+@include breakpoint(tablet, "screen") {
+    .kaufland-section {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+}
+
+@include breakpoint(md, "screen") {
+
+    .kaufland-section {
+
+        &__carousel {
+
+            .kaufland-banner {
+                // Prevent slick's auto resizing
+                flex: 0 0 300px;
+                height: 200px !important;
+                margin-right: 32px !important;
+            }
+        }
+    }
+}

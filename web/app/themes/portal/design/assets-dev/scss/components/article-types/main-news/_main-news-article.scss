@@ -1,0 +1,388 @@
+@use "../../../abstracts/helpers" as *;
+
+/**
+ * The default style - content above image
+ */
+.main-news-box {
+    //width: 335px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+
+    // Content part
+    .content {
+        margin-bottom: 24px;
+        text-decoration: none;
+        transition: var(--base-transition);
+
+        .meta-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+            justify-content: left;
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 42px;
+            margin-bottom: 8px;
+        }
+
+        h2, h3 {
+            color: var(--color-dark-d200);
+            transition: var(--base-transition);
+        }
+    }
+
+    a.content:hover {
+        color: var(--color-link-hover);
+
+        // It shouldn't be changed
+        .aras-tag:hover {
+            background-color: var(--color-primary-red);
+            color: var(--color-blue-b100);
+        }
+
+        h2, h3 {
+            color: var(--color-link-hover);
+        }
+    }
+
+    // Image / gallery part
+    .header-gallery-container,
+    .featured-image-container {
+        width: 335px;
+        height: 200px;
+        overflow: hidden;
+        display: flex;
+        align-content: stretch;
+        align-items: stretch;
+        position: relative;
+
+        img {
+            object-fit: cover;
+            flex: 1;
+        }
+    }
+
+    .header-gallery-container {
+        width: 100%; // Take up the full width of the container
+        height: 200px; // Set the desired height
+        overflow: hidden; // Hide overflow
+        position: relative;
+        display: flex; // Display as a flex container
+        justify-content: center; // Center the slides
+        align-items: center; // Center vertically
+    }
+
+    .featured-image-container {
+        flex: 0 0 auto; // Do not grow or shrink, fixed width
+        height: 200px; // Take up the full height of the container
+        display: flex;
+        align-items: center; // Center vertically
+    }
+
+    .featured-image-container img {
+        object-fit: cover;
+        width: 100%; // Ensure the image takes the full width
+        height: 100%; // Ensure the image takes the full height
+    }
+
+    .author-box--header {
+        .author {
+            padding: 0 0 11px 0;
+        }
+    }
+}
+
+@include breakpoint(tablet, "screen") {
+
+    .main-news-box {
+        //width: 767px;
+
+        .content {
+            width: 100%;
+            margin-bottom: 16px;
+
+            h2 {
+                a {
+                    span {
+                        letter-spacing: 0.8px;
+                        color: red;
+                    }
+                }
+
+                // On single article details page there is no link in title
+                span {
+                    letter-spacing: 0.8px;
+                }
+            }
+        }
+
+        .header-gallery-container,
+        .featured-image-container {
+            width: 767px;
+            height: 502px;
+        }
+
+        // When the image / gallery container is the main media container on the page (e.g. single article details)
+        .header-gallery-container.header-gallery-container--article-header,
+        .featured-image-container.featured-image-container--article-header {
+            width: 767px;
+            height: 445px;
+        }
+
+
+        .author-box--header {
+            .author {
+                padding: 0 0 0 0;
+            }
+        }
+    }
+}
+
+@include breakpoint(md, "screen") {
+
+    .main-news-box {
+        width: 632px;
+
+        .content {
+            width: 100%;
+            margin-bottom: 16px;
+
+            h2 {
+                a {
+                    span {
+                        letter-spacing: 0.8px;
+                    }
+                }
+
+                // On single article details page there is no link in title
+                span {
+                    letter-spacing: 0.8px;
+                }
+            }
+        }
+
+        .header-gallery-container,
+        .featured-image-container {
+            width: 632px;
+            height: 414px;
+        }
+
+        // When the image / gallery container is the main media container on the page (e.g. single article details)
+        .header-gallery-container.header-gallery-container--article-header,
+        .featured-image-container.featured-image-container--article-header {
+            width: 632px;
+            height: 368px;
+        }
+
+
+        .author-box--header {
+            .author {
+                padding: 0 0 0 0;
+            }
+        }
+    }
+}
+
+/**
+ * Variation - content on image
+ */
+.main-news-box--content-on-image {
+    position: relative;
+    height: 488px;
+    overflow: hidden;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: absolute;
+        left: 20px;
+        bottom: 15px;
+        right: 20px;
+        // container width 335px - 2 x vertical position 20px
+        width: 295px;
+        height: 473px;
+        margin-bottom: 0;
+        // Bring above
+        z-index: 1;
+
+        .meta-container {
+            .aras-label--red {
+                color: var(--color-blue-b100);
+            }
+        }
+
+        h2,
+        h3 {
+            color: var(--color-blue-b100);
+        }
+
+        h2 {
+            a {
+                color: var(--color-blue-b100);
+
+                &:hover {
+                    color: var(--color-link-hover);
+                }
+            }
+        }
+    }
+
+    .header-gallery-container,
+    .featured-image-container {
+        width: 335px;
+        height: 488px;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: var(--gradient-landscape);
+        }
+    }
+}
+
+@include breakpoint(tablet, "screen") {
+
+    .main-news-box--content-on-image {
+        width: 767px;
+
+        .content {
+            left: 20px;
+            bottom: 15px;
+            right: 20px;
+            // container width 767px - 2 x vertical position 20px
+            width: calc(100% - 40px);
+        }
+
+        .header-gallery-container,
+        .featured-image-container {
+            width: 767px;
+            height: 592px;
+        }
+    }
+}
+
+@include breakpoint(md, "screen") {
+
+    .main-news-box--content-on-image,
+    .main-news-box--content-above-image {
+        //width: 632px;
+        width: 100%;
+
+        .content {
+            left: 20px;
+            bottom: 15px;
+            right: 20px;
+        }
+
+        .header-gallery-container,
+        .featured-image-container {
+            //width: 632px;
+            width: 100%;
+            //height: 488px;
+            height: 100%;
+        }
+    }
+}
+
+
+/**
+ * Variation - content under image
+ */
+.main-news-box--content-under-image {
+    flex-direction: column-reverse;
+
+    .content {
+        padding-bottom: 16px;
+        border-bottom: 1px solid var(--color-grey-g100);
+
+        .meta-container {
+            margin-top: 16px;
+        }
+    }
+
+    .header-gallery-container,
+    .featured-image-container {
+        width: var(--main-news-box-gallery-width);
+        height: var(--main-news-box-gallery-height);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-gallery-container {
+        width: var(--main-news-box-gallery-width);
+        height: var(--main-news-box-gallery-height);
+        overflow: hidden; // Hide overflow
+        position: relative;
+        display: flex; // Display as a flex container
+        justify-content: center; // Center the slides
+        align-items: center; // Center vertically
+    }
+
+    .featured-image-container {
+        //flex: 0 0 auto; // Do not grow or shrink, fixed width
+        //height: 100%; // Take up the full height of the container
+        width: var(--main-news-box-gallery-width);
+        height: var(--main-news-box-gallery-height);
+        display: flex;
+        align-items: center; // Center vertically
+    }
+
+    .featured-image-container img {
+        object-fit: cover;
+        width: 100%; // Ensure the image takes the full width
+        height: 100%; // Ensure the image takes the full height
+        width: var(--main-news-box-gallery-width);
+        height: var(--main-news-box-gallery-height);
+    }
+}
+
+@include breakpoint(tablet, "screen") {
+
+    .main-news-box--content-under-image,
+    .main-news-box--content-above-image {
+        width: var(--main-news-box-gallery-width);
+
+        .header-gallery-container,
+        .featured-image-container {
+            width: var(--main-news-box-gallery-width);
+            height: var(--main-news-box-gallery-height);
+            max-height: 100%;
+        }
+    }
+}
+
+@include breakpoint(md, "screen") {
+
+    .main-news-box--content-under-image,
+    .main-news-box--content-above-image {
+        width: var(--main-news-box-gallery-width);
+
+        .header-gallery-container,
+        .featured-image-container {
+            width: var(--main-news-box-gallery-width);
+            height: 100% !important;
+
+            .slider-article-img img {
+                height: 414px !important;
+            }
+
+            .slider-article-title {
+                padding-bottom: 16px !important;
+                border-bottom: 1px solid var(--color-grey-g100) !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@use "../../abstracts/helpers" as *;
+
+.sponsored-links-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    img {
+        width: 110px;
+        height: 30px;
+        margin-top: 1px;
+        margin-right: 1px;
+        margin-bottom: 2px;
+    }
+}
+
+@include breakpoint(md, "screen") {
+
+    .sponsored-links-header {
+
+        img {
+            margin-top: 3px;
+            margin-right: 1px;
+            margin-bottom: 0;
+        }
+    }
+}

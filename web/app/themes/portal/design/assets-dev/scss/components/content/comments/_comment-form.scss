@@ -1,0 +1,59 @@
+@use '../../../abstracts/helpers' as *;
+
+.comment-form {
+    width: 100%;
+    margin: 24px 0 25px 0;
+
+    .comment-text {
+        display: block;
+        width: 100%;
+        max-width: 634px;
+        height: 140px;
+        padding: 10px 20px 13px 19px;
+        background-color: var(--color-blue-b100);
+        border: 1px solid var(--color-grey-g200);
+        color: var(--color-dark-d200);
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 24px;
+        margin-bottom: 24px;
+
+        &::placeholder {
+            color: var(--color-dark-d200);
+            opacity: 1; // Firefox tweak
+        }
+
+        &:focus {
+            border: 1px solid var(--color-primary-red);
+            outline: var(--color-primary-red) solid 1px;
+        }
+    }
+
+    .comment-submit {
+        display: block;
+        color: var(--color-blue-b100);
+        background-color: var(--color-primary-red);
+        padding: 14px 20px 15px 20px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.96px;
+        line-height: 1.25;
+        text-align: center;
+        border: none;
+        text-transform: uppercase;
+        margin-bottom: 19px;
+    }
+
+    p {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+    }
+}
+
+@include breakpoint(md, "only screen") {
+    .comment-form {
+        margin: 53px 0 25px 0;
+    }
+}

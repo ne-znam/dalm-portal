@@ -1,0 +1,111 @@
+@use "../../../abstracts/helpers" as *;
+
+.news-3-big-article {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-grey-g100);
+    text-decoration: none;
+    color: var(--color-dark-d200);
+    transition: var(--base-transition);
+
+    header {
+        position: relative;
+        width: 100%;
+        height: 60%;
+        min-height: 200px;
+        overflow: hidden;
+        // For image cover
+        display: flex;
+        align-content: stretch;
+        align-items: stretch;
+
+        img {
+            object-fit: cover;
+            flex: 1;
+            transition: var(--base-transition);
+        }
+    }
+
+    h3 {
+        margin-top: 14px;
+        font-family: var(--ff-condensed);
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 30px;
+        color: var(--color-dark-d200);
+        text-decoration: none;
+        transition: var(--base-transition);
+
+        span {
+            letter-spacing: 0.28px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        margin-top: 2px;
+        transition: var(--base-transition);
+    }
+
+    &:hover {
+        @include image-hover;
+
+        h3,
+        p {
+            color: var(--color-link-hover);
+        }
+    }
+}
+
+// New:
+
+.news-3-big-article header {
+    height: 60%; /* (200px height / 335px width) * 100% */
+}
+
+
+@include breakpoint(tablet, "screen") {
+    .news-3-big-article,
+    .featured-article-container,
+    .featured-article {
+        width: 100%;
+    }
+
+    .news-3-big-article {
+        padding-bottom: 10px;
+    }
+
+    .news-3-big-article header {
+        width: 100%;
+        min-height: 178px;
+        height: 178px;
+    }
+    .news-3-big-article h3 {
+        font-size: 28px;
+        overflow: hidden;
+        padding: 0 0 4px 0;
+        margin-top: 16px;
+    }
+
+    .news-3-big-article p {
+        margin-top: 0;
+        overflow: hidden;
+    }
+}
+
+@include breakpoint(md, "screen") {
+    .featured-article h3,
+    .news-3-big-article p {
+        font-size: 16px;
+    }
+
+    .news-3-big-article,
+    .featured-article-container,
+    .featured-article {
+        width: 100%;
+    }
+}

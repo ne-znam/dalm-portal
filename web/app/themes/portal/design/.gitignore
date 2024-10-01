@@ -1,0 +1,10 @@
+# node:
+/node_modules
+.idea/
+
+# Generated tmp:
+/builds
+/svn
+composer.lock
+.DS_Store
+.vscode

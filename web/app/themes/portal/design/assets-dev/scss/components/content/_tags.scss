@@ -1,0 +1,51 @@
+.aras-tag {
+    padding: 8px 12px;
+    border-radius: 32px;
+    background-color: var(--color-primary-red);
+    color: var(--color-blue-b100);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.96px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: normal;
+    border: 2px solid var(--color-primary-red);
+    padding: 6px 10px;
+    transition: var(--base-transition);
+
+    &:hover {
+        background-color: var(--color-blue-b100);
+        color: var(--color-primary-red);
+    }
+
+    &.aras-tag--red-outline {
+        color: var(--color-primary-red);
+        background-color: transparent;
+
+        &:hover {
+            color: var(--color-blue-b100);
+            background-color: var(--color-primary-red);
+        }
+    }
+
+    &.aras-tag--white-outline {
+        color: var(--color-blue-b100);
+        border: 2px solid var(--color-blue-b100);
+        background-color: transparent;
+
+        &:hover {
+            border: 2px solid var(--color-primary-red);
+            background-color: var(--color-primary-red);
+        }
+    }
+}
+
+/* Container for tags */
+.tags-header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}

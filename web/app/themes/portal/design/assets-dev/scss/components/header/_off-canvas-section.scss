@@ -1,0 +1,163 @@
+.off-canvas {
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 0px 20px 32px 20px;
+        background-color: var(--color-dark-d200);
+
+        // Position it on the right top corner
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 500; // layer should be shown top of all another
+
+        // Hide it
+        transform: translateX(100%);
+        // Basic animation between shown - hidden states
+        transition: transform .5s ease;
+    }
+
+    &__container--opened {
+        // Show it
+        transform: translateX(0);
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-top: 14px;
+        padding-bottom: 16px;
+    }
+
+    &__logo-container {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: left;
+        gap: 9px;
+
+        img {
+            width: 167px;
+            transition: var(--base-transition);
+        }
+
+        .off-canvas-logo--hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        &:hover {
+
+            img:not(.off-canvas-logo--hover) {
+                opacity: 0;
+            }
+
+            .off-canvas-logo--hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__close-btn {
+        width: 22px;
+        height: 22px;
+
+        // Color and width of X lines
+        path {
+            fill: none;
+            stroke: var(--color-blue-b100);
+            stroke-width: 2px;
+            transition: var(--base-transition);
+        }
+
+        &:hover {
+
+            path {
+                stroke: var(--color-link-hover);
+            }
+        }
+    }
+
+    &__search-input {
+        display: block;
+        width: 335px;
+        border: none;
+        border-radius: 17px;
+        height: 34px;
+        // BG padding from left side (9px) + BG image (18px) + BG padding from left side (9px) for symmetric
+        padding-left: 36px;
+        // Set magnifier icon as background
+        background-color: var(--color-blue-b100);
+        background-image: url('../images/search-icon.svg');
+        background-attachment: scroll;
+        background-size: 18px 18px;
+        background-position: left 9px center;
+        background-repeat: no-repeat;
+    }
+
+    //&__menu-container {}
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        list-style-type: none;
+        padding-left: 0;
+        width: 335px;
+
+        // Set menu container's height: 
+        //      100% viewport height
+        //      - off-canvas header 68px
+        //      - search bar height 34px
+        //      - gap between header and search bar 24px
+        //      - gap between search bar and menu 24px
+        //      - off-canvas' bottom padding 32px
+        height: calc(100vh - 182px);
+        // Set vertically scrollbar
+        overflow-y: auto;
+
+        // Hide scrollbar for IE, Edge and Firefox
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+
+        // Hide scrollbar for Chrome, Safari and Opera */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .menu-item {
+
+            a {
+                color: var(--color-blue-b100);
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: 0.32px;
+                transition: var(--base-transition);
+
+                &:hover {
+                    color: var(--color-link-hover);
+                }
+            }
+
+            &.active {
+
+                a {
+                    color: var(--color-link-hover);
+                    cursor: not-allowed;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}

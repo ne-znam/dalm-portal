@@ -1,0 +1,36 @@
+@use "../../abstracts/helpers" as *;
+
+.main-footer {
+
+    &__logo-container {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: left;
+        gap: 9px;
+
+        img {
+            max-width: 167px;
+            transition: var(--base-transition);
+        }
+
+        .footer-logo--hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        &:hover {
+
+            img:not(.footer-logo--hover) {
+                opacity: 0;
+            }
+
+            .footer-logo--hover {
+                opacity: 1;
+            }
+        }
+    }
+}

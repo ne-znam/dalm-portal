@@ -1,0 +1,216 @@
+@use "../../../abstracts/helpers" as *;
+
+// This element contains the tag container, if it defined, and the black background part
+.column-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0 0;
+    width: 100%;
+    border-bottom: 1px solid var(--color-grey-g100);
+    margin-top: 30px;
+
+    // This is the content container with black background
+    &__content {
+        padding: 181px 20px 20px 20px;
+        // Because of the image
+        position: relative;
+        background-color: var(--color-dark-d200);
+        width: 100%;
+    }
+
+    &__avatar-container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        // Top: vertical gap between ad and column (Figma UI) 52px - gap between ad and portrait image 19px => 33px
+        top: -33px;
+        width: 175px;
+        height: 194px;
+        // Horizontal center the image
+        display: flex;
+        justify-content: center;
+
+        img {
+            max-width: unset;
+            height: 194px;
+        }
+    }
+
+    .name-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 11px;
+
+        .aras-tag.aras-tag--white-outline:hover {
+            border: 2px solid var(--color-link-hover);
+        }
+    }
+
+    .news-5-container {
+        z-index: 1;
+
+        .news-5-article {
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--color-blue-b100);
+            margin-bottom: 11px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+                border-bottom: none;
+            }
+
+            h4 {
+                font-size: 16px;
+                margin-bottom: 0;
+                color: var(--color-blue-b100);
+            }
+
+            &:hover {
+
+                h4 {
+                    color: var(--color-link-hover);
+                }
+            }
+        }
+    }
+
+    .aras-btn {
+        width: 100%;
+    }
+
+    /**
+     * When the box has tag
+     */
+
+    .tags-header {
+        padding: 5px 0 16px 0;
+    }
+
+    .tags-header {
+        display: none;
+    }
+
+    &--without-border {
+        border-bottom: 1px solid transparent;
+    }
+
+    &--last-with-border {
+        border-bottom: 1px solid var(--color-grey-g100);
+    }
+}
+
+@include breakpoint(tablet, "screen") {
+    .column-box {
+
+        &--last-with-border {
+            border-bottom: 1px solid transparent;
+        }
+
+        .news-5-container {
+
+            .news-5-article {
+
+                h4 {
+                    font-size: 16px;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    white-space: pre-wrap;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(md, "screen") {
+
+    .column-box {
+        flex-shrink: 0;
+        margin-top: 3px;
+
+        .tags-header {
+            display: flex;
+        }
+
+        .name-container {
+            margin-bottom: 11px;
+        }
+
+        .tags-header + .column-box__content {
+            padding: 181px 20px 20px 20px;
+
+            .column-box__avatar-container {
+                width: 232px;
+                height: 212px;
+                top: -52px;
+
+                img {
+                    height: 213px;
+                }
+            }
+        }
+
+        &__avatar-container {
+            top: -33px;
+            width: 178px;
+            height: 196px;
+
+            img {
+                height: 100%;
+                height: 194px;
+            }
+        }
+
+        .news-5-container {
+            .news-5-article {
+                h4 {
+                    font-size: 16px;
+                    margin-bottom: 0;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    white-space: pre-wrap;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(desktop, "screen") {
+    .column-box {
+        .tags-header + .column-box__content {
+            padding: 181px 20px 20px 20px;
+
+            .column-box__avatar-container {
+                width: 200px;
+                height: 183px;
+                top: -25px;
+
+                img {
+                    height: 184px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(e1, "screen") {
+    .column-box {
+
+        .tags-header + .column-box__content {
+
+            .column-box__avatar-container {
+                width: 232px;
+                height: 212px;
+                top: -52px;
+
+                img {
+                    height: 213px;
+                }
+            }
+        }
+    }
+}

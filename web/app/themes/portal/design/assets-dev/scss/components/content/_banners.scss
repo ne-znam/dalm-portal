@@ -1,0 +1,79 @@
+@use "../../abstracts/helpers" as *;
+
+.square-banner {
+    display: flex;
+    align-content: stretch;
+    align-items: stretch;
+    //padding-bottom: 20px;
+    //border-bottom: 1px solid var(--color-grey-g100);
+    margin-left: auto;
+    margin-right: auto;
+    transition: var(--base-transition);
+    width: 100%;
+
+    img {
+        object-fit: cover;
+        flex: 1;
+        transition: var(--base-transition);
+    }
+
+    &.list {
+        min-height: 347px;
+        height: 100%;
+    }
+
+    &.border {
+        padding: 20px 0;
+        border-bottom: 1px solid var(--color-grey-g100);
+    }
+
+    &:hover {
+
+        @include image-hover;
+    }
+}
+
+// When banners are in this container, the height 
+// from 2. banner must be changed
+.square-2-banner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    gap: 32px;
+
+    .square-banner {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    /*.square-banner:not(:first-of-type) {
+        height: 218px;
+    }*/
+}
+
+.special-banner {
+    display: flex;
+    align-content: stretch;
+    align-items: stretch;
+    transition: var(--base-transition);
+
+    img {
+        object-fit: cover;
+        flex: 1;
+        transition: var(--base-transition);
+    }
+
+    &:hover {
+
+        @include image-hover;
+    }
+}
+
+@include breakpoint(tablet, "screen") {
+
+    .square-banner {
+        margin-left: unset;
+        margin-right: unset;
+    }
+}

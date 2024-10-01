@@ -1,0 +1,235 @@
+@use "../../../abstracts/helpers" as *;
+
+.news-with-image-and-list {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: var(--color-dark-d200);
+    width: 100%;
+
+    .article-list-left {
+        padding: 20px;
+
+        .article-list-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .extra-small-article {
+                width: 100%;
+
+                &:last-of-type {
+                    padding-bottom: 18px;
+                    border-bottom: none;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .aras-btn {
+            width: 100%;
+            line-height: normal;
+        }
+    }
+
+    // Right side on desktop, top on mobile
+    .big-article-container-right, .big-article-container-bottom {
+        position: relative;
+        min-height: 286px;
+        overflow: hidden;
+        display: flex;
+        align-content: stretch;
+        align-items: stretch;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: var(--gradient-landscape);
+        }
+
+        img {
+            object-fit: cover;
+            flex: 1;
+            position: relative;
+            transition: var(--base-transition);
+        }
+
+        .overlay-helper {
+            position: absolute;
+            bottom: 17px;
+            left: 20px;
+            right: 20px;
+            width: 260px;
+            // Show it on the top of gradient
+            z-index: 1;
+
+            .tags-header {
+                margin-bottom: 7px;
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--color-blue-b100);
+                transition: var(--base-transition);
+            }
+
+            & > a {
+                display: block;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 14px;
+                letter-spacing: 0.24px;
+                margin-top: 13px;
+
+                span {
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 0.96px;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &:hover {
+
+            @include image-hover;
+
+            .overlay-helper {
+
+                a:hover {
+                    color: var(--color-link-hover);
+                }
+            }
+        }
+    }
+}
+
+.news-with-image-and-list {
+    .big-article-container-right {
+        &.small {
+            .overlay-helper {
+                h3 {
+                    font-size: 28px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(hd, "only screen") {
+    .news-with-image-and-list {
+        .big-article-container-right {
+            h3 {
+                font-size: 40px !important;
+                line-height: 42px !important;
+            }
+        }
+    }
+}
+
+@include breakpoint(sm, "screen") {
+    .news-with-image-and-list {
+        .big-article-container-right {
+            h3 {
+                font-size: 28px;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+@include breakpoint(tablet, "screen") {
+    .news-with-image-and-list {
+        .big-article-container-right {
+            .overlay-helper {
+                width: calc(100% - 20px);
+                max-width: 572px;
+            }
+        }
+    }
+}
+
+@include breakpoint(md, "screen") {
+    .news-with-image-and-list {
+        width: 100%;
+        flex-direction: row;
+        gap: 32px;
+        padding: 20px;
+
+        // Left side on desktop, bottom on mobile
+        .article-list-left {
+            flex: 0 0 auto; // This ensures fixed width for the left side
+            width: 280px;
+            padding: 0;
+
+            .article-list-container {
+                .extra-small-article {
+                    width: 280px;
+                }
+            }
+        }
+
+        // Right side on desktop, top on mobile
+        .big-article-container-right {
+            flex: 1 0 calc(100% - 280px - 32px); // This allows the right side to take up remaining space
+            max-height: 446px;
+
+            .overlay-helper {
+                bottom: 16px;
+                left: 20px;
+                right: 12px;
+                width: calc(100% - 20px);
+
+                .tags-header {
+                    margin-bottom: 10px;
+                }
+
+                h3 {
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    white-space: pre-wrap;
+                    padding-bottom: 3px;
+                }
+
+                & > a {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(lg, "only screen") {
+
+    .news-with-image-and-list {
+
+        // Right side on desktop, top on mobile
+        .big-article-container-right, .big-article-container-bottom {
+            flex: 1 1 auto;
+            max-height: 446px;
+
+            .overlay-helper {
+                width: 100%;
+                width: calc(100% - 20px);
+                //max-width: 572px;
+            }
+        }
+
+        .big-article-container-bottom {
+            h3 {
+                width: 100%;
+                //max-width: 540px;
+                font-size: 40px;
+                line-height: 42px;
+            }
+        }
+    }
+}

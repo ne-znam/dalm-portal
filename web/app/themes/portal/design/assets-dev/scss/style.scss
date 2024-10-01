@@ -1,0 +1,162 @@
+/**
+ * Main SCSS file
+ * 
+ * @package RootPixel
+ * @subpackage DalmatinskiPortal
+ * @since DalmatinskiPortal 1.0.0
+ */
+
+// Breakpoints and mixins
+@use "abstracts/helpers" as *;
+// CSS reset for browsers
+@use "base/reset" as *;
+
+// CSS variables
+@use "base/base" as *;
+// Include and define font families
+@use "base/typography" as *;
+
+// Layout definitions for main sections (header, content, footer, site container, etc.)
+@use "base/layout/main-layout" as *;
+
+/**
+ * =================================================================================================================
+ * Grid naming conventions for homepages
+ * =================================================================================================================
+ * 
+ * The class names of the grid areas, that won't be changed on the homepage variations:
+ *
+ *      .row-<row number>__<module class name shown on desktop view>[--<number of element>]
+ *
+ * The "row number" is independent from modified parts of the homepage variations
+ *
+ * The "module class name shown on desktop view" is the classname of the child element but not atoms,
+ * e.g. cannot be "aras-label", "aras-tag" or "aras-btn"
+ *
+ * The "number of element" is used, when there are more same module in a row.
+ *
+ * Examples: 
+ *
+ *      .row-3__news-4
+ *      .row-4__kaufland-banners
+ *
+ * When 3x News 3 are in a row:
+ *
+ *      .row-5__news-3--1
+ *      .row-5__news-3--2
+ *      .row-5__news-3--3
+ *
+ *
+ * Naming of homepage-spacific parts:
+ *
+ *      .mod-hp-<homepage number>-<row number>-<column number>__<module class name shown on desktop view>[--<number of element>]
+ *
+ * "hp" = homepage
+ * "homepage number" is the number of homepage variation (1 - 5)
+ * "row number" is the modified row number, it must be independent from common grid numbering (from .row-<number>)
+ * "column number" is the column number in the modified row
+ * "module class name shown on desktop view" is the classname of the child element but not atoms,
+ * e.g. cannot be "aras-label", "aras-tag" or "aras-btn"
+ * "number of element" is used, when there are more same module in a row
+ *
+ * Examples:
+ *
+ *      The first modified row on homepage-1 contains a "News with image and list" module,
+ *      second row contains 3x "Portrait banner" modules and the third row contains again
+ *      a "News with image and list" module and a "News 3" module:
+ *
+ *      .mod-hp-1-1__news-with-image-and-list   // row 1
+ *      .mod-hp-1-2__portrait-banner--1         // row 2
+ *      .mod-hp-1-2__portrait-banner--2         // row 2
+ *      .mod-hp-1-2__portrait-banner--3         // row 2
+ *      .mod-hp-1-3__news-with-image-and-list   // row 3
+ *      .mod-hp-1-3__news-3                     // row 3
+ */
+
+// Rules for the main (common) grid (without variations)
+@use "base/layout/homepages/common-grid" as *;
+
+// Rules for the (common) child elements of main (common) grid (without variations)
+@use "base/layout/homepages/common-child-layout" as *;
+
+// Grid area definitions for the specific page
+@use "base/layout/homepages/grid-variations/homepage-1" as *;
+@use "base/layout/homepages/grid-variations/homepage-2" as *;
+@use "base/layout/homepages/grid-variations/homepage-3" as *;
+@use "base/layout/homepages/grid-variations/homepage-4" as *;
+@use "base/layout/homepages/grid-variations/homepage-5" as *;
+
+// Page-specific grid child rules, that defines the difference areas for the specific page
+@use "base/layout/homepages/child-layout-variations/child-layout--homepage-1" as *;
+@use "base/layout/homepages/child-layout-variations/child-layout--homepage-2" as *;
+@use "base/layout/homepages/child-layout-variations/child-layout--homepage-3" as *;
+@use "base/layout/homepages/child-layout-variations/child-layout--homepage-4" as *;
+@use "base/layout/homepages/child-layout-variations/child-layout--homepage-5" as *;
+
+// Layout of another pages
+@use "base/layout/article-details/article-details" as *;
+@use "base/layout/category/category" as *;
+@use "base/layout/items-list/items-list" as *;
+@use "base/layout/search/search" as *;
+
+// Layout helper classes
+@use "base/layout/layout-helpers" as *;
+
+// Header style definitions with off-canvas toggler button and off-canvas menu definitions
+@use "components/header/top-navbar" as *;
+@use "components/header/header-brand-nav-container" as *;
+@use "components/header/hero-header-section" as *;
+@use "components/header/search-section" as *;
+@use "components/header/off-canvas-section" as *;
+@use "components/header/sticky-off-canvas-toggler" as *;
+@use "components/header/header-banner" as *;
+
+// Simple element definitions
+@use "components/content/buttons" as *;
+@use "components/content/tags" as *;
+@use "components/content/promo" as *;
+@use "components/content/label" as *;
+@use "components/content/category-card" as *;
+@use "components/content/sponsored-links-header" as *;
+@use "components/content/theme" as *;
+@use "components/content/portrait-banner-section" as *;
+@use "components/content/banners" as *;
+@use "components/content/kaufland-banners" as *;
+@use "components/content/deco-line" as *;
+
+// Article type definitions
+@use "components/article-types/news-3/big-article" as *;
+@use "components/article-types/featured/featured-container" as *;
+@use "components/article-types/featured/featured-article" as *;
+@use "components/article-types/news-4/news-4-article" as *;
+@use "components/article-types/news-5/news-5-article" as *;
+@use "components/article-types/columns/column-box" as *;
+@use "components/article-types/news-extra-small/extra-small-article" as *;
+@use "components/article-types/news-with-image-and-list/news-with-image-and-list" as *;
+@use "components/article-types/main-news/main-news-article" as *;
+@use "components/article-types/news-2/news-2-module" as *;
+@use "components/article-types/story-module/story-module" as *;
+
+// Style definitions for the single post page
+@use "components/content/single-post/header" as *;
+@use "components/content/single-post/header-meta" as *;
+@use "components/content/single-post/author-box--header" as *;
+@use "components/content/single-post/ad-container" as *;
+@use "components/content/single-post/author-box--footer" as *;
+
+// Style definitions for the comment form and -list on the single post page
+@use "components/content/comments/emotion-rating" as *;
+@use "components/content/comments/comment-form" as *;
+@use "components/content/comments/comment-list" as *;
+
+// Footer children definitions
+@use "components/footer/logo-container" as *;
+@use "components/footer/navbar-container" as *;
+
+// Page-specific styles (modifications of the common style related to the specific page)
+@use "pages/single-article.scss" as *;
+@use "pages/category" as *;
+
+// 3-party styles
+@use "vendor/slick" as *;
+

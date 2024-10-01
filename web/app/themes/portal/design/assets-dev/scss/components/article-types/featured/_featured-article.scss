@@ -1,0 +1,173 @@
+@use "../../../abstracts/helpers" as *;
+
+.featured-article {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-grey-g100);
+    margin-bottom: 14px;
+    width: 100%;
+    max-width: 100%;
+    text-decoration: none;
+    transition: var(--base-transition);
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    header {
+        position: relative;
+        display: flex;
+        flex-shrink: 0;
+        align-content: stretch;
+        align-items: stretch;
+        width: 88px;
+        height: 56px;
+        overflow: hidden;
+
+        img {
+            object-fit: cover;
+            flex: 1;
+            transition: var(--base-transition);
+        }
+    }
+
+    h3 {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: var(--ff-regular);
+        text-decoration: none;
+        color: var(--color-dark-d200);
+        line-height: 22px;
+        transition: var(--base-transition);
+    }
+
+    p {
+        display: none;
+    }
+
+    &:hover {
+
+        h3 {
+            color: var(--color-link-hover);
+        }
+
+        @include image-hover;
+
+        // For the extra paragraph in .featured-article--small-to-big
+        p {
+            color: var(--color-link-hover);
+        }
+    }
+}
+
+.featured-article--small-to-big {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+@include breakpoint(sm, "screen") {
+
+    .featured-article--small-to-big {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--color-grey-g100);
+        margin-bottom: 0;
+        gap: 0;
+
+        header {
+            position: relative;
+            width: 300px;
+            height: 178px;
+            overflow: hidden;
+            // For image cover
+            display: flex;
+            align-content: stretch;
+            align-items: stretch;
+
+            img {
+                object-fit: cover;
+                flex: 1;
+            }
+
+            // Create medium sized promo label on desktop
+            .aras-promo--small {
+                width: 50px;
+                height: 17px;
+                font-size: 10px;
+                letter-spacing: 0.8px;
+            }
+        }
+
+        h3 {
+            margin-top: 14px;
+            font-family: var(--ff-condensed);
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 30px;
+            text-decoration: none;
+            letter-spacing: 0;
+
+            span {
+                letter-spacing: 0.28px;
+            }
+        }
+
+        p {
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 26px;
+            margin-top: 2px;
+            transition: var(--base-transition);
+        }
+    }
+}
+
+@include breakpoint(tablet, "screen") {
+
+    .featured-article {
+        align-items: flex-start;
+
+        header {
+            // line height 22px - font size 16px = 6px
+            margin-top: 6px;
+        }
+
+        h3 {
+            font-size: 16px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            white-space: pre-wrap;
+        }
+    }
+}
+
+@include breakpoint(md, "screen") {
+
+    .featured-article {
+        align-items: center;
+
+        header {
+            // reset margin
+            margin-top: 0;
+        }
+    }
+}
+
+@include breakpoint(desktop, "screen") {
+
+    .featured-article {
+
+        h3 {
+            font-size: 16px;
+        }
+    }
+}

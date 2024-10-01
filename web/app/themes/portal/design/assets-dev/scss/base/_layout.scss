@@ -1,0 +1,279 @@
+@use '../abstracts/helpers' as *;
+
+body {
+    background-color: var(--color-blue-b100);
+    color: var(--color-dark-d200);
+    font-family: var(--ff-regular);
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+// Define as flexbox, because the change of children's order on mobile / desktop
+.main-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    // Center the direct childen because .header-brand-nav-container and .header-hero-section
+    // when screen width > 1440px
+    justify-content: center;
+    gap: 0;
+}
+
+.content-section {
+    background-color: var(--color-blue-b100);
+    padding: 0 20px 0 20px;
+
+    &__inner-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
+
+/**
+ * Article details page (single article)
+ * Article content with 2 sidebars
+ */
+.article-content-container {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 32px;
+
+    .main-article {
+        max-width: 632px;
+    }
+
+    .main-sidebar {
+        display: none;
+    }
+}
+
+.article-content {
+    margin: 16px 0 24px 0;
+}
+
+.article-footer,
+.sponsored-links-container {
+    width: 100%;
+}
+
+.sponsored-links-container {
+    margin-top: 23px;
+
+    .featured-article-container {
+        margin-top: 16px;
+        margin-bottom: 24px;
+    }
+}
+
+.comment-container {
+    width: 100%;
+}
+
+.main-footer {
+    background-color: var(--color-dark-d200);
+    padding: 14px 20px 15px 20px;
+
+    &__inner-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
+
+// General container for Category- and homepage
+.general-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+// Container for news 3 articles and featured articles together
+.helper-news-3-with-featured {
+    width: 100%;
+}
+
+// 50.75rem ~812px
+@include breakpoint(tablet, "screen") {
+
+    .inner-content-container {
+        max-width: calc(1296px - 300px - 32px);
+
+        .story-container {
+            max-width: calc(1296px - 300px - 32px);
+        }
+
+    }
+
+    .general-container {
+        flex-direction: row;
+        justify-content: left;
+        column-gap: 16px;
+        row-gap: 16px;
+        padding-right: 0;
+    }
+
+    .article-footer {
+        flex-direction: column;
+    }
+
+    .content-section {
+
+        &__inner-container {
+            padding: 0 0;
+            justify-content: left;
+            gap: 16px;
+        }
+    }
+
+    .article-content-container {
+        margin-top: 32px;
+        flex-direction: row;
+        justify-content: left;
+        align-items: flex-start;
+    }
+
+    .article-content {
+        margin: 19px 0 24px 0;
+    }
+
+    .sponsored-links-container {
+        margin-top: 16px;
+
+        .featured-article-container {
+            margin-top: 15px;
+            margin-bottom: 61px;
+        }
+    }
+
+    .main-footer {
+        padding: 28px 0 30px 0;
+
+        &__inner-container {
+            padding: 0 20px;
+            justify-content: space-between;
+            height: 18px;
+        }
+    }
+
+    .helper-news-3-with-featured {
+        width: 245px;
+    }
+}
+
+// 64rem ~1024px
+@include breakpoint(md, "screen") {
+
+    .general-container {
+        column-gap: 32px;
+        padding-right: 0;
+    }
+
+    .main-header {
+        justify-content: space-between;
+    }
+
+    .content-section {
+        padding: 0 0 55px 0;
+
+        &__inner-container {
+            padding: 0 20px;
+            justify-content: space-between;
+            gap: 32px;
+        }
+    }
+
+    // Change the container width, the order of elements and hide the news 4 article
+    .md-big-header {
+        width: 960px !important;
+        justify-content: center;
+
+        .main-news-box--content-on-image {
+            order: 1;
+        }
+
+        .news-4-article {
+            display: none;
+        }
+
+        .column-box {
+            order: 2;
+        }
+    }
+
+    .helper-news-3-with-featured {
+        width: 300px;
+    }
+}
+
+// 81rem ~1296px
+@include breakpoint(lg, "screen") {
+    .content-section {
+
+        &__inner-container {
+            padding: 0 72px;
+        }
+    }
+
+    .main-footer {
+
+        &__inner-container {
+            padding: 0 72px;
+        }
+    }
+}
+
+// 90rem ~1366px
+@include breakpoint(e1, "screen") {
+    .main-header {
+        justify-content: center;
+    }
+
+    // Show the sidebars on the single article pages
+    .article-content-container {
+        flex-wrap: nowrap !important;
+
+        .main-sidebar {
+            width: 300px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    // Set the right layout back
+    .md-big-header {
+        width: 100% !important;
+        justify-content: left;
+
+        .main-news-box--content-on-image {
+            order: 1;
+        }
+
+        .news-4-article {
+            order: 2;
+            display: flex;
+        }
+
+        .column-box {
+            order: 3;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@use "../../../abstracts/helpers" as *;
+
+.featured-article-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    padding: 0 0;
+}
+
+@include breakpoint(sm, "only screen") {
+    /**
+    * This modificator is used, when small articles on the mobile
+    * are shown as big articles on desktop, e.g. sponsored articles
+    * after article content on single article page 
+    */
+    .featured-article-container--small-to-big {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px 32px;
+    }
+}
+
+@include breakpoint(md, "screen") {
+    .featured-article-container {
+        max-width: 300px;
+    }
+}

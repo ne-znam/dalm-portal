@@ -1,0 +1,45 @@
+/*
+ * This file forwards the variables, mixins and functions 
+ */
+
+@forward 'variables/breakpoints' with (
+    $breakpoints: (
+        'xs': 32rem, // ~512px
+        'sm': 48rem, // ~768px
+        'tablet': 50.75rem, // ~812px
+        'md': 64rem, // ~1024px
+        'desktop': 71rem, // ~1136px
+        'lg': 81rem, // ~1296px
+        'xl': 90rem,  // ~1440px
+        'hd': 120rem, // ~1920px
+        'uh': 160rem, // ~2560px
+        '4k': 240rem,  // ~3840px
+        'e1': 85.375rem // ~1366px - extra breakpoint for header banners
+    )
+);
+
+/* Opacity transition on hover for images */
+@mixin image-hover {
+    img {
+        opacity: .9;
+    }
+}
+
+/* Retina media query */
+@mixin retina {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+        @content;
+    }
+}
+
+/* Grid helper for IE browsers */
+@mixin ie-grid {
+    @media all and (-ms-high-contrast: none) {
+        @content;
+    }
+}

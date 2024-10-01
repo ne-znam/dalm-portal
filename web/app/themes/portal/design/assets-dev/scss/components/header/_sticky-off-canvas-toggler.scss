@@ -1,0 +1,33 @@
+.sticky-off-canvas-toggler {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 78px;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    background-color: var(--color-dark-d200);
+    transition: transform .3s ease;
+    z-index: 499;
+
+    svg {
+        width: 38px;
+        height: 38px;
+
+        circle {
+            fill: var(--color-blue-b100);
+        }
+
+        path {
+            fill: var(--color-grey-g100);
+        }
+    }
+}
+
+// The button becomes this class from JS, when the page is scrolled
+.sticky-off-canvas-toggler--active {
+    transform: translateX(0);
+    transition: transform .3s ease;
+}

@@ -1,0 +1,115 @@
+@use "./helpers.scss" as *;
+
+// Create an empty map for store the "main" break points from helpers.scss
+$breakpoints--only-numbers: ();
+
+@each $key, $value in $breakpoints {
+    // Divide by 1rem to remove 'rem' unit
+    $breakpoints--only-numbers: map-merge(
+            $breakpoints--only-numbers,
+            (
+                $key: calc($value / 1rem),
+            )
+    );
+}
+
+/**
+ * Breakpoints - we define not all, only these:
+ * 'xs': 32rem, ~512px
+ * 'sm': 48rem, ~768px
+ * 'md': 64rem, ~1024px
+ * 'lg': 80rem, ~1280px
+ * 'xl': 90rem, ~1440px
+ */
+$grid__bp-xs: map-get($breakpoints--only-numbers, "xs");
+$grid__bp-sm: map-get($breakpoints--only-numbers, "sm");
+$grid__bp-md: map-get($breakpoints--only-numbers, "md");
+$grid__bp-lg: map-get($breakpoints--only-numbers, "lg");
+$grid__bp-xl: map-get($breakpoints--only-numbers, "xl");
+
+// Column number of our grid system
+$grid__cols: 12;
+
+/**
+ * The modificator of the class names, e.g. .col-sm-4, .col-xl-3
+ */
+$map-grid-props: (
+    "": 0,
+    "-xs": $grid__bp-xs,
+    "-sm": $grid__bp-sm,
+    "-md": $grid__bp-md,
+    "-lg": $grid__bp-lg,
+    "-xl": $grid__bp-xl,
+);
+
+/**
+ * Create media query
+ *
+ * Technically it can create min-width and max-width
+ * parameters, but because of the mobile-first approach
+ * we will use only min-width expressions
+ */
+@mixin create-mq($breakpoint, $min-or-max) {
+    // It is mandatory, because we need the .col-* classes without
+    // any media queries too...
+    @if ($breakpoint == 0) {
+        @content;
+    } @else {
+        @media screen and (#{$min-or-max}-width: calc($breakpoint * 1rem)) {
+            @content;
+        }
+    }
+}
+
+/**
+ * Generate the .col-* classes in media queries
+ */
+@mixin create-col-classes($modifier, $grid-cols, $breakpoint) {
+    @include create-mq($breakpoint, "min") {
+        @for $i from 1 through $grid-cols {
+            .col#{$modifier}-#{$i} {
+                flex-basis: calc(100% / calc($grid-cols / $i));
+            }
+        }
+    }
+}
+
+@each $modifier, $breakpoint in $map-grid-props {
+    // Add name to empty modifier
+    // We need to keep the original empty, because another mixins use it too
+    @if ($modifier == "") {
+        $modifier: "-xs";
+    }
+}
+
+/**
+ * "Traditional container class with static max-width
+ */
+.container {
+    width: 100%;
+    // Set the max-with to ~1440px because Figma's desktop design system
+    max-width: $grid__bp-xl * 1rem;
+    margin: 0 auto;
+
+    // Fluid variant
+    &--fluid {
+        width: 100%;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    // The row, it will be filled with .col-* containers
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1440px;
+    }
+}
+
+/**
+ * Loop over all, and create the whole grid system
+ */
+@each $modifier, $breakpoint in $map-grid-props {
+    @include create-col-classes($modifier, $grid__cols, $breakpoint);
+}

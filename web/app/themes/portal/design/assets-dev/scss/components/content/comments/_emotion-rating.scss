@@ -1,0 +1,161 @@
+@use '../../../abstracts/helpers' as *;
+
+.emotion-voting-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 20px auto 24px auto;
+
+    .vote_for_your_emotion {
+        text-decoration: none;
+        border-right: 1px solid var(--color-grey-g100);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4px;
+
+        &:first-of-type {
+            border-left: 1px solid var(--color-grey-g100);
+            min-width: 68px;
+            width: 20%;
+            max-width: 124px;
+        }
+
+        &:nth-of-type(2) {
+            min-width: 68px;
+            width: 20%;
+            max-width: 123px;
+        }
+
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+            min-width: 67px;
+            width: 20%;
+            max-width: 129px;
+        }
+
+        &:nth-of-type(5) {
+            min-width: 65px;
+            width: 20%;
+            max-width: 129px;
+        }
+
+        .emotion,
+        .description,
+        .count {
+            color: var(--color-grey-g200);
+            text-align: center;
+        }
+
+        .emotion {
+            padding: 7px 0 0 0;
+
+            svg {
+                width: 24px;
+                height: 23px;
+                margin: 0 auto;
+            }
+        }
+
+        .description {
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 10px;
+        }
+
+        .count {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+            padding-bottom: 4px;
+        }
+
+        &:hover,
+        &.vote_for_your_emotion--voted {
+            .emotion,
+            .description,
+            .count {
+                color: var(--color-primary-red);
+            }
+        }
+    }
+}
+
+@include breakpoint(md, "only screen") {
+
+    .emotion-voting-container {
+        margin: 20px auto 53px auto;
+
+        .vote_for_your_emotion {
+            gap: 8px;
+
+            &:first-of-type {
+                // width = 122px + margin-left + margin-right
+                //width: 124px;
+            }
+
+            &:nth-of-type(2) {
+                // width = 122px + margin-right
+                //width: 123px;
+            }
+
+            &:nth-of-type(3),
+            &:nth-of-type(4),
+            &:nth-of-type(5) {
+                // width = 128px (122px + inner container 3px padding left + inner container 3px padding right) + margin-right
+                //width: 129px;
+            }
+
+            .emotion {
+                padding: 8px 0 0 0;
+
+                svg {
+                    width: 44px;
+                    height: 44px;
+                }
+            }
+
+            .description {
+                font-size: 14px;
+                line-height: 18px;
+                font-family: var(--ff-normal);
+                font-weight: 700;
+            }
+
+            .count {
+                font-size: 24px;
+                line-height: normal;
+                padding-bottom: 9px;
+            }
+        }
+    }
+}
+
+@include breakpoint(desktop, "screen") {
+    .emotion-voting-container {
+
+        .vote_for_your_emotion {
+
+            &:first-of-type {
+                // width = 122px + margin-left + margin-right
+                width: 124px;
+            }
+
+            &:nth-of-type(2) {
+                // width = 122px + margin-right
+                width: 123px;
+            }
+
+            &:nth-of-type(3),
+            &:nth-of-type(4),
+            &:nth-of-type(5) {
+                // width = 128px (122px + inner container 3px padding left + inner container 3px padding right) + margin-right
+                width: 129px;
+            }
+        }
+    }
+}

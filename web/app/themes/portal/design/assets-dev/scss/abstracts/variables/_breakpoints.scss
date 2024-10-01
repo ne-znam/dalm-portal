@@ -1,0 +1,31 @@
+/*
+ * Define breakpoints for viewports
+ *
+ */
+
+// Edit breakpoints in helpers.scss
+$breakpoints: (
+    xs: 32rem, // ~512px
+    sm: 48rem, // ~768px
+    tablet: 50.75rem, // ~812px
+    md: 64rem, // ~1024px
+    desktop: 71rem, // ~1136px
+    lg: 81rem, // ~1296px
+    xl: 90rem, // ~1440px
+    hd: 120rem, // ~1920px
+    uh: 160rem, // ~2560px
+    4 k: 240rem, // ~3840px
+    e1: 85.375rem // ~1366px - extra breakpoint for header banners
+) !default;
+
+@mixin breakpoint($breakpoint, $logic: false) {
+    @if ($logic) {
+        @media #{$logic} and (min-width: map-get($map: $breakpoints, $key: $breakpoint)) {
+            @content;
+        }
+    } @else {
+        @media (min-width: map-get($map: $breakpoints, $key: $breakpoint)) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,78 @@
+:root {
+
+    /**
+     * Primary colors
+     */
+    --color-primary-blue: #2d3e4f;
+    --color-primary-red: #e44d42;
+
+    /**
+     * Neutral colors
+     */
+    --color-neutral-black: #000000;
+    --color-neutral-white: #ffffff;
+    --color-dark-d200: #262626;
+    --color-dark-d100: rgba(38, 38, 38, .6);
+    --color-grey-g200: #969696;
+    --color-grey-g100: #d7d7d7;
+
+    /**
+     * Blue colors
+     */
+    --color-blue-b700: #43576b;
+    --color-blue-b600: #5a6c7e;
+    --color-blue-b500: #708294;
+    --color-blue-b400: #93a2b0;
+    --color-blue-b300: #afb8bf;
+    --color-blue-b200: #c8ccd0;
+    --color-blue-b100: #ecf0f1;
+
+    /**
+     * Red colors
+     */
+    --color-red-r300: #fc6f65;
+    --color-red-r200: #eb958f;
+    --color-red-r100: #e7b5b2;
+
+    /**
+     * Navigation bar border color on mobile
+     */
+    --color-border-nav--mobile: #aaaaaa;
+
+    /**
+     * Link hover color
+     */
+    --color-link-hover: var(--color-primary-red);
+
+    /**
+     * Gradients
+     */
+    --gradient-landscape: linear-gradient(180deg, rgba(32, 32, 32, 0.00) 0%, rgba(32, 32, 32, 0.00) 39.29%, #202020 100%);
+    --gradient-portrait: linear-gradient(180deg, rgba(32, 32, 32, 0.00) 0%, rgba(32, 32, 32, 0.50) 39.29%, #202020 100%);
+    --gradient-small-blue: linear-gradient(180deg, rgba(19, 33, 46, 0.05) 0%, rgba(19, 33, 46, 0.90) 71.35%, #13212E 100%);
+
+    /**
+     * Font families
+     */
+    --ff-condensed: "Instrument Sans Condensed";
+    --ff-semi-condensed: "Instrument Sans SemiCondensed";
+    --ff-regular: "Instrument Sans";
+    --ff-source-serif-4: "Source Serif 4";
+
+    /**
+     * Transition
+     */
+    --base-transition: .3s all ease;
+
+    /**
+     * Column width on desktop
+     */
+    --desktop-initial-column-width: 244px;
+    --desktop-max-column-width: 300px;
+
+    /**
+     * Dynamic variables, they will be set with JavaScript
+     */
+    --main-news-box-gallery-width: 632px;
+    --main-news-box-gallery-height: 414px;
+}
