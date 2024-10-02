@@ -6,7 +6,7 @@ class DP_Command extends WP_CLI_Command
 
     public function __construct()
     {
-        $this->wpdb2 = new wpdb(DB_USER, DB_PASSWORD, 'old_dp', DB_HOST);
+        $this->wpdb2 = new wpdb(DB_USER, DB_PASSWORD, 'v2dalmatinski_dbase', DB_HOST);
     }
 
     public function import_categories()
