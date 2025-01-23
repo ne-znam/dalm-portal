@@ -6,7 +6,7 @@ class DP_Command extends WP_CLI_Command
 
     public function __construct()
     {
-        $this->wpdb2 = new wpdb(DB_USER, DB_PASSWORD, 'v2dalmatinski_dbase', DB_HOST);
+        $this->wpdb2 = new wpdb('dportal_webuse', 'b6R8kyzpJt9I', 'dportal_dbase', DB_HOST);
     }
 
     public function import_categories()
@@ -76,6 +76,7 @@ class DP_Command extends WP_CLI_Command
                 $id = wp_insert_post([
                     'post_title'    => $row->naslov_vijesti,
                     'post_content'  => $row->tekst_vijesti,
+					'post_name'     => $row->url_vijesti,
                     'post_status'   => 'publish',
                     'post_type'     => 'post',
                     'post_date'     => sprintf('%s-%s-%s %s:%s:%s', $row->god_vijesti, $row->mj_vijesti, $row->dan_vijesti, $row->hh_vijesti, $row->mm_vijesti, $row->ss_vijesti),
